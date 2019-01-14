@@ -1,0 +1,83 @@
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrapper section .inner-head h1 {
+    font-size: 1.5rem; }
+  .wrapper section .inner-head p {
+    font-size: 13px; }
+  .wrapper section .like {
+    font-size: 16px; }
+  .wrapper section .home-hero {
+    height: auto;
+    padding: 50px 20px; }
+    .wrapper section .home-hero .titles h2 {
+      font-size: 2rem; }
+  .wrapper section .home-identity {
+    padding: 2rem 1rem; }
+  .wrapper section .home-shop {
+    padding: 20px 0; }
+    .wrapper section .home-shop ul li {
+      margin-bottom: 15px; }
+  .wrapper section .collections-all-eachwrap-each {
+    width: calc((100%)/2);
+    margin: 0; }
+    .wrapper section .collections-all-eachwrap-each .col-img {
+      height: auto; }
+    .wrapper section .collections-all-eachwrap-each .details h2 {
+      font-size: 13px; }
+    .wrapper section .collections-all-eachwrap-each .details h3 {
+      font-size: 14px; }
+      .wrapper section .collections-all-eachwrap-each .details h3 span {
+        font-size: 12px; }
+    .wrapper section .collections-all-eachwrap-each .details .actions {
+      padding: 5px 0; }
+      .wrapper section .collections-all-eachwrap-each .details .actions button {
+        font-size: 10px;
+        margin-right: 5px;
+        padding: 3px 8px; }
+  .wrapper .footer-subscribe {
+    padding: 2rem; }
+    .wrapper .footer-subscribe h2 {
+      font-size: 1.3rem; }
+    .wrapper .footer-subscribe p {
+      font-size: 12px; }
+    .wrapper .footer-subscribe form {
+      margin-top: 15px;
+      min-width: 20%;
+      display: flex;
+      flex-flow: row nowrap; }
+      .wrapper .footer-subscribe form input[type="text"] {
+        border: 2px solid #CCC;
+        color: #fff;
+        height: 35px;
+        font-size: 12px;
+        padding: 5px;
+        border-radius: 0px;
+        background: none;
+        margin-right: 10px; }
+      .wrapper .footer-subscribe form button {
+        height: 35px;
+        color: #fff;
+        border-radius: 0;
+        line-height: 33px;
+        padding: 0 15px;
+        border: 2px solid #ca0030;
+        font-weight: 500; }
+  .wrapper .footer-insta {
+    padding: 2rem 15px; }
+    .wrapper .footer-insta-left {
+      margin-bottom: 15px !important; }
+      .wrapper .footer-insta-left h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem; }
+      .wrapper .footer-insta-left h3 {
+        font-size: 1rem;
+        margin-bottom: 5px; }
+    .wrapper .footer-insta-right .instaimg {
+      height: 59px;
+      width: 59px; }
+      .wrapper .footer-insta-right .instaimg a img {
+        height: 60px;
+        width: 60px; }
+  .wrapper .footer-foot .footlogo {
+    font-size: .7rem; } }
+
+/*# sourceMappingURL=mobile.css.map */

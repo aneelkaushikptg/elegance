@@ -1,0 +1,148 @@
+.wrapper{
+    @media (min-width: 320px) and (max-width:767px) { 
+
+
+    section{
+        & .inner{
+            &-head{
+                h1 {
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 13px;
+                }
+            }
+        }
+        & .like{
+            font-size: 16px;
+        }
+        & .home{
+            &-hero{
+                height: auto;
+                padding: 50px 20px;
+             & .titles{
+                 h2{
+                     font-size:2rem;
+                 }
+             } 
+            }
+            &-identity{
+                padding: 2rem 1rem;
+            }
+            &-shop{
+                padding: 20px 0;
+                ul{
+                    li{
+                        margin-bottom:15px;
+                    }
+                }
+            }
+        }
+        & .collections{
+           &-all{
+               &-eachwrap{
+                &-each{
+                    width: calc((100%)/2);
+                    margin: 0;
+                    & .col-img{
+                        height:auto;
+                    }
+                    & .details{
+                        h2{
+                            font-size: 13px;
+                        }
+                        h3{
+                            font-size: 14px;
+                            span{
+                                font-size:12px;
+                            }
+                        }
+                        & .actions{
+                            padding: 5px 0;
+                            button{
+                                font-size: 10px;
+                                margin-right: 5px;
+                                padding: 3px 8px;
+                            }
+                        }
+                    }
+                }
+               }
+            }   
+        }
+ 
+    }
+       
+
+        .footer{
+            &-subscribe{ 
+              padding: 2rem;
+              h2{
+                font-size: 1.3rem;
+              }
+              p{
+                font-size: 12px;
+              }
+              form{
+                margin-top: 15px;
+                min-width: 20%;
+                display: flex;
+                flex-flow: row nowrap;
+                input[type="text"]{
+                  border:2px solid #CCC;
+                  color:#fff;
+                  height:35px;
+                  font-size: 12px;
+                  padding: 5px;
+                  border-radius: 0px;
+                  background: none;
+                  margin-right:10px;
+                }
+                button{
+                  height:35px;
+                  color: #fff;
+                  border-radius: 0;
+                  line-height: 33px;
+                  padding: 0 15px;
+                  border: 2px solid #ca0030;
+                  font-weight: 500;
+                }
+              }      
+            }
+            &-insta{
+              padding: 2rem 15px;
+            
+              &-left{
+                  margin-bottom:15px !important;
+                h2{
+                  font-size: 1.5rem;
+                  margin-bottom: 1.5rem;
+                }
+                h3{
+                  font-size: 1rem;
+                  margin-bottom:5px;
+                }
+              }
+              &-right{
+                & .instaimg{
+                    height:59px;
+                    width:59px;
+                  a{
+                    img{
+                      height: 60px;
+                      width: 60px;
+                    }
+                  }
+                }      
+              }
+            }
+            &-foot{
+             & .footlogo{
+                 font-size: .7rem;
+              }
+            }
+        }
+     }
+
+
+}

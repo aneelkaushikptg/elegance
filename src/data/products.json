@@ -1,0 +1,217 @@
+[
+    {
+        "id": 1,
+        "name": "Light Brown Shirt",
+        "description": "Light Brown Shirt for Women",
+        "price": 4.99,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/nNmKz5/img2.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img3.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img4.jpg"
+        },
+        "inCart": false,
+        "category": "Designer Wear",
+        "arrival": "new",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": false,
+            "M": false,
+            "L": false,
+            "XL": false,
+            "XXL": false
+        }
+    },
+    {
+        "id": 2,
+        "name": "Women Grey Shirt",
+        "description": "Grey Shirt for Women",
+        "price": 14.99,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/n6iMCQ/img3.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img2.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img4.jpg"
+        },
+        "inCart": false,
+        "category": "Designer Wear",
+        "arrival": "new",
+        "liked": false,
+        "sizes": {
+            "XS": true,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": false,
+            "XXL": false
+        }
+    },
+    {
+        "id": 3,
+        "name": "Warm Shirt Women",
+        "description": "Woolen Hoodie Women",
+        "price": 20.00,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/dVfORk/img4.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img3.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
+        },
+        "inCart": false,
+        "category": "Designer Wear",
+        "arrival": "new",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    },
+    {
+        "id": 4,
+        "name": "Women Grey Shirt",
+        "description": "Light Grey Shirt for Women",
+        "price": 4.99,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/jpMxmk/img5.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img2.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img3.jpg"
+        },
+        "inCart": false,
+        "category": "Casual Wear",
+        "arrival": "new",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    },
+    {
+        "id": 5,
+        "name": "Women Red/Brown Shirt",
+        "description": "Red/Brown Blouse for Women",
+        "price": 19.99,
+        "type": "blouse",
+        "coverimg": "https://image.ibb.co/mJppz5/img6.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img4.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
+        },
+        "inCart": false,
+        "category": "Casual Wear",
+        "arrival": "new",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    },
+    {
+        "id": 6,
+        "name": "Dark Grey Shirt Women",
+        "description": "Dark Grey Shirt for Women",
+        "price": 6.00,
+        "type": "shirt",
+        "category": "Casual Wear",
+        "arrival": "new",
+        "liked": false,
+        "coverimg": "https://image.ibb.co/eZiSmk/img7.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img6.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
+        },
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    },
+    {
+        "id": 7,
+        "name": "White Shirt Women",
+        "description": "White Shirt for Women",
+        "price": 14.99,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/dyCysQ/img8.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img6.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
+        },
+        "inCart": false,
+        "category": "Casual Wear",
+        "arrival": "old",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    },
+    {
+        "id": 8,
+        "name": "Black Shirt Women",
+        "description": "Black Shirt for Women",
+        "price": 20.99,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/eOYre5/img10.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img3.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img6.jpg"
+        },
+        "inCart": false,
+        "category": "Party Wear",
+        "arrival": "old",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    },
+    {
+        "id": 9,
+        "name": "No Shoulder Hoodie",
+        "description": "Hoodie for Women",
+        "price": 4.99,
+        "type": "shirt",
+        "coverimg": "https://image.ibb.co/f6gcK5/img9.jpg",
+        "images": {
+            "1": "https://image.ibb.co/nNmKz5/img5.jpg",
+            "2": "https://image.ibb.co/nNmKz5/img7.jpg"
+        },
+        "inCart": false,
+        "category": "Party Wear",
+        "arrival": "old",
+        "liked": false,
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
+    }
+]

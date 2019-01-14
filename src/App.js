@@ -1,26 +1,37 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Route, Redirect, Switch } from "react-router-dom";
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+import Home from "./components/Home";
+import Collections from "./components/Collections";
+import Product from "./components/Product";
+import { About } from "./components/About";
+import { Wishlist } from "./components/Wishlist";
+import { Contact } from "./components/Contact";
+import { Dashboard } from "./components/admin/Dashboard";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <main className="container-fluid wrapper">
+          <div className="row">
+            <Header />
+            <Switch>
+              <Route path="/home" component={Home} />
+              <Route path="/collections" component={Collections} />
+              <Route path="/about" component={About} />
+              <Route path="/wishlist" component={Wishlist} />
+              <Route path="/contact" component={Contact} />
+              <Route path="/product" component={Product} />
+              <Route path="/admin" component={Dashboard} />
+              <Redirect from="/" exact to="/home" />
+              {/* <Redirect to="/not-found" /> */}
+            </Switch>
+            <Footer />
+          </div>
+        </main>
+      </React.Fragment>
     );
   }
 }
