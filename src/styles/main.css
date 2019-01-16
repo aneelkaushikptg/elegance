@@ -725,6 +725,19 @@ a:hover {
         font-weight: 700;
         letter-spacing: 2px;
         font-size: 1rem; }
+  .wrapper .login {
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .wrapper .login-inner {
+      border: 1px solid #ddd;
+      background: #e9ecef;
+      padding: 50px 25px;
+      width: 400px; }
+      .wrapper .login-inner h2 {
+        margin-bottom: 20px; }
 
 .fi {
   font-family: "Flaticon"; }

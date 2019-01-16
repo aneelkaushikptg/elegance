@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import Instafeed from 'react-instafeed';
+//import Instafeed from 'react-instafeed';
 
 class Footer extends React.Component {
     render() {
@@ -29,7 +29,7 @@ class Footer extends React.Component {
                              </a>
                         </div>
                         <div className="col-12 col-md-6 footer-insta-right">
-                            {/* <div id={instafeedTarget}> *
+                            {/* <div id={instafeedTarget}> 
                             <Instafeed
                                     limit='10'
                                     get='user'
@@ -42,8 +42,8 @@ class Footer extends React.Component {
                                     userId='8732700903'
                                     clientId='86dca64ad9f745258acc708e00f4141d'
                                     accessToken='8732700903.1677ed0.bb2c987efd7d4fa283f8d6fbd389b16b'
-                                />
-                            </div> */}
+                                /> 
+                        </div>*/}
                         </div>
                     </div>
                 </div>

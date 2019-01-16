@@ -1,8 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from 'react-router-dom';
+//import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
 
 const Header = props => {
+
+  const responseFacebook = (response) => {
+    console.log(response);
+  }
+
+  const responseGoogle = (response) => {
+    console.log(response);
+  }
+
   return (
     <React.Fragment>
       <div className="menubar">
@@ -15,8 +26,10 @@ const Header = props => {
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center">
-              <a className="btn btn-sm btn-outline-secondary m-2" href="#">Sign In</a>
-              <a className="btn btn-sm btn-outline-secondary" href="#">Register</a>
+              <Link to="/login" className="btn btn-primary">Login</Link>
+              {/* <FacebookLogin appId="" fields="name,email,picture" callback={responseFacebook} /> 
+              <GoogleLogin clientId="173421738183-6hffoeklipiqfjlq8no6hsqclmv73dhq.apps.googleusercontent.com" buttonText="Login with G+" onSuccess={responseGoogle}
+                onFailure={responseGoogle} />*/}
             </div>
           </div>
         </div>

@@ -949,6 +949,23 @@ a {
       }
     }
   }
+
+  .login{
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-inner{
+      border: 1px solid #ddd;
+      background: #e9ecef;
+      padding: 50px 25px;
+      width: 400px;
+    h2{
+      margin-bottom: 20px;
+    }
+    }
+  }
 }
 
 
