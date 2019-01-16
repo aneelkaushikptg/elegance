@@ -135,6 +135,51 @@
               }
             }
         }
+        .navbar {
+            width:100%;
+            padding: 8px;
+            border-bottom: 1px solid #ebebeb;
+            border-top: 1px solid #ebebeb;
+            &-toggler{
+                background:url(../images/menu.png);  
+                background-size:24px;
+                background-repeat:no-repeat;              
+            }
+            &-nav {
+              li {
+                display:inline-block;
+                padding: 0;
+                margin:0 15px;
+                width:100%;
+                a {
+                  color: #000;
+                  font-size: .7rem;
+                  font-family: Varela Round,sans-serif;
+                  text-transform: uppercase;
+                  font-weight: 600;
+                  letter-spacing: 2px;
+                  background:none;
+                  height:25px;
+                  line-height: 25px;
+                  padding: 0;
+        
+                  &.active {
+                    background: #ca0030;
+                    color:#fff;
+                    &:hover {
+                      background: #ca0030;
+                      color:#fff;
+                    }
+                  }
+        
+                  &:hover {
+                    background:#333;
+                    color:#fff;
+                  }
+                }
+              }
+            }
+          }
         .login{
             &-inner{
                 padding: 30px 25px;
