@@ -1,8 +1,6 @@
 .wrapper{
     @media (min-width: 320px) and (max-width:767px) { 
 
-
-    section{
         & .inner{
             &-head{
                 h1 {
@@ -69,11 +67,7 @@
                 }
                }
             }   
-        }
- 
-    }
-       
-
+        }       
         .footer{
             &-subscribe{ 
               padding: 2rem;

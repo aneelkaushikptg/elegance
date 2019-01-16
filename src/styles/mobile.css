@@ -1,35 +1,35 @@
 @media (min-width: 320px) and (max-width: 767px) {
-  .wrapper section .inner-head h1 {
+  .wrapper .inner-head h1 {
     font-size: 1.5rem; }
-  .wrapper section .inner-head p {
+  .wrapper .inner-head p {
     font-size: 13px; }
-  .wrapper section .like {
+  .wrapper .like {
     font-size: 16px; }
-  .wrapper section .home-hero {
+  .wrapper .home-hero {
     height: auto;
     padding: 50px 20px; }
-    .wrapper section .home-hero .titles h2 {
+    .wrapper .home-hero .titles h2 {
       font-size: 2rem; }
-  .wrapper section .home-identity {
+  .wrapper .home-identity {
     padding: 2rem 1rem; }
-  .wrapper section .home-shop {
+  .wrapper .home-shop {
     padding: 20px 0; }
-    .wrapper section .home-shop ul li {
+    .wrapper .home-shop ul li {
       margin-bottom: 15px; }
-  .wrapper section .collections-all-eachwrap-each {
+  .wrapper .collections-all-eachwrap-each {
     width: calc((100%)/2);
     margin: 0; }
-    .wrapper section .collections-all-eachwrap-each .col-img {
+    .wrapper .collections-all-eachwrap-each .col-img {
       height: auto; }
-    .wrapper section .collections-all-eachwrap-each .details h2 {
+    .wrapper .collections-all-eachwrap-each .details h2 {
       font-size: 13px; }
-    .wrapper section .collections-all-eachwrap-each .details h3 {
+    .wrapper .collections-all-eachwrap-each .details h3 {
       font-size: 14px; }
-      .wrapper section .collections-all-eachwrap-each .details h3 span {
+      .wrapper .collections-all-eachwrap-each .details h3 span {
         font-size: 12px; }
-    .wrapper section .collections-all-eachwrap-each .details .actions {
+    .wrapper .collections-all-eachwrap-each .details .actions {
       padding: 5px 0; }
-      .wrapper section .collections-all-eachwrap-each .details .actions button {
+      .wrapper .collections-all-eachwrap-each .details .actions button {
         font-size: 10px;
         margin-right: 5px;
         padding: 3px 8px; }
