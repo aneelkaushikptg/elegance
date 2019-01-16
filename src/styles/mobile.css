@@ -78,6 +78,9 @@
         height: 60px;
         width: 60px; }
   .wrapper .footer-foot .footlogo {
-    font-size: .7rem; } }
+    font-size: .7rem; }
+  .wrapper .login-inner {
+    padding: 30px 25px;
+    width: 300px; } }
 
 /*# sourceMappingURL=mobile.css.map */

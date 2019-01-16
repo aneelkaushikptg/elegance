@@ -33,7 +33,7 @@ class Home extends React.Component {
                   </Link>
                     </div>
                     <div className="home-identity-right col-md-5 d-none d-sm-block">
-                        <img src="../images/homebg.jpg" className="img-fluid" alt="Identity" />
+                        <img src={require('../images/identity.jpg')} className="img-fluid" alt="Identity" />
                     </div>
                 </div>
 

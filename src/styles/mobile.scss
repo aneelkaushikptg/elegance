@@ -1,6 +1,5 @@
 .wrapper{
     @media (min-width: 320px) and (max-width:767px) { 
-
         & .inner{
             &-head{
                 h1 {
@@ -136,7 +135,11 @@
               }
             }
         }
+        .login{
+            &-inner{
+                padding: 30px 25px;
+                width: 300px;
+            }
+        }
      }
-
-
 }

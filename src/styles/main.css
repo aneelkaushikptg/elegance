@@ -66,36 +66,39 @@ a:hover {
     flex-flow: row wrap; }
     .wrapper .menubar .logo img {
       width: 135px; }
-    .wrapper .menubar .navbar {
-      width: 100%;
-      line-height: 30px;
-      border-bottom: 1px solid #ebebeb;
-      border-top: 1px solid #ebebeb; }
-      .wrapper .menubar .navbar-nav {
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        flex: 1 0 auto; }
-        .wrapper .menubar .navbar-nav li {
-          display: inline-block;
-          padding: 0 10px; }
-          .wrapper .menubar .navbar-nav li a {
-            color: #fff;
-            font-size: .7rem;
-            font-family: Varela Round,sans-serif;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 2px;
-            background: #000;
-            padding: 4px 15px; }
-            .wrapper .menubar .navbar-nav li a.active {
+  .wrapper .navbar {
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid #ebebeb;
+    border-top: 1px solid #ebebeb; }
+    .wrapper .navbar-nav {
+      flex-flow: row wrap;
+      justify-content: center;
+      flex: 1 0 auto; }
+      .wrapper .navbar-nav li {
+        display: inline-block;
+        padding: 0;
+        margin: 0 15px; }
+        .wrapper .navbar-nav li a {
+          color: #fff;
+          font-size: .7rem;
+          font-family: Varela Round,sans-serif;
+          text-transform: uppercase;
+          font-weight: 600;
+          letter-spacing: 2px;
+          background: #000;
+          height: 25px;
+          line-height: 25px;
+          padding: 0; }
+          .wrapper .navbar-nav li a.active {
+            background: #ca0030;
+            color: #fff; }
+            .wrapper .navbar-nav li a.active:hover {
               background: #ca0030;
               color: #fff; }
-              .wrapper .menubar .navbar-nav li a.active:hover {
-                background: #ca0030;
-                color: #fff; }
-            .wrapper .menubar .navbar-nav li a:hover {
-              background: #333;
-              color: #fff; }
+          .wrapper .navbar-nav li a:hover {
+            background: #333;
+            color: #fff; }
   .wrapper .btn-prime {
     border-radius: 25px;
     background: #ca0030;
@@ -805,13 +808,13 @@ a:hover {
 
 @font-face {
   font-family: "Flaticon";
-  src: url("/src/fonts/Flaticon.eot");
-  src: url("/src/fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("/src/fonts/Flaticon.woff") format("woff"), url("/src/fonts/Flaticon.ttf") format("truetype"), url("/src/fonts/Flaticon.svg#Flaticon") format("svg");
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("/fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal; }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("/src/fonts/Flaticon.svg#Flaticon") format("svg"); } }
+    src: url("../fonts/Flaticon.svg#Flaticon") format("svg"); } }
 
 /*# sourceMappingURL=main.css.map */
