@@ -26,7 +26,7 @@ class App extends Component {
               <Route path="/product" component={Product} />
               <Route path="/admin" component={Dashboard} />
               <Redirect from="/" exact to="/home" />
-              {/* <Redirect to="/not-found" /> */}
+              <Redirect to="/home" component={Home} />
             </Switch>
             <Footer />
           </div>

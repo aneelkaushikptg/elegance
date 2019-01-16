@@ -11,7 +11,7 @@ const Header = props => {
             <div className="col-4 pt-1 d-none d-sm-block"></div>
             <div className="col-4 text-center">
               <Link to={"/home"} className="navbar-brand logo">
-                <img src="../../images/logo.png" className="img-fluid" alt="logo" />
+                <img src="../src/images/logo.png" className="img-fluid" alt="logo" />
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-end align-items-center">
