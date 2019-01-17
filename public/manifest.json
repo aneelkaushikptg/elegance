@@ -1,15 +1,21 @@
 {
   "short_name": "Aarohi Elegance",
   "name": "Fashion App",
+  "start_url": "/?utm_source=a2hs",
+  "display": "standalone",
+  "background_color": "#666666",
+  "theme_color": "#666666",
+  "description": "Learning to create a PWA app using React",
   "icons": [
     {
       "src": "pwa1.png",
       "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "pwa2.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
 }
