@@ -356,6 +356,22 @@ a {
     }   
   }
 
+  & .about{
+    &-intro{
+      padding-top:2rem;
+      padding-bottom: 2rem;
+      h2{
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      p{
+        font-family: 'Comfortaa', cursive;
+        font-size: 13px;
+        line-height: 21px;
+      }
+    }
+  }
+
   & .collections {
     vertical-align: top;    
     &-all{
@@ -365,6 +381,14 @@ a {
         justify-content: center;
         align-items:center;
         margin:20px 0;
+        & .filters{
+          select{
+            padding: 5px;
+            border:1px solid #CCC;
+            height: 30px;
+            color:#000;
+          }
+        }
         button{
           border-radius: 0px; 
           outline:none;

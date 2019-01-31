@@ -4,11 +4,15 @@ import ProductsData from "../data/products.json";
 import Like from "../components/common/Like";
 import Shared from "../services/shared";
 
+let finalData = ProductsData;;
 class Products extends React.Component {
     // getting the selected product and passing to product page
     constructor(props) {
         super(props)
-        console.log(this.props);
+        this.onloadfun();
+        this.state = {
+            showCategory: 'All'
+        };
     }
 
     selectProduct(product) {
@@ -25,12 +29,25 @@ class Products extends React.Component {
         // Shared.likeProduct = product;
     }
 
-    render() {
-        const imageURL = "../images/products/";
+    onloadfun() {
+        console.log(this.props.selectedCategory);
+        const filterby = this.props.selectedCategory;
+        //finalData = ProductsData.filter(e=> e.category == this.props.filterBy);
 
+        if (filterby === "All") {
+            finalData = ProductsData;
+        } else {
+            finalData = ProductsData.filter(e => e.category == filterby);
+        }
+    }
+
+    render() {
+        const filterby = this.props.selectedCategory;
+        const imageURL = "../images/products/";
+        this.onloadfun();
         return (
             <div className="collections-all-eachwrap">
-                {ProductsData.map((product) => {
+                {finalData.map((product) => {
                     return (
                         <div className="collections-all-eachwrap-each" key={product.id}>
                             <div className="col-img" onClick={() => this.selectProduct(product)}>
@@ -57,6 +74,7 @@ class Products extends React.Component {
         );
     }
 }
+
 
 
 export default Products;

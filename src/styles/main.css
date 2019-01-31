@@ -274,6 +274,16 @@ a:hover {
             .wrapper .home-shop ul li h4 span {
               font-size: .8rem;
               font-family: Open Sans,sans-serif; }
+  .wrapper .about-intro {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
+    .wrapper .about-intro h2 {
+      margin-bottom: 1rem;
+      text-align: center; }
+    .wrapper .about-intro p {
+      font-family: 'Comfortaa', cursive;
+      font-size: 13px;
+      line-height: 21px; }
   .wrapper .collections {
     vertical-align: top; }
     .wrapper .collections-all-types {
@@ -282,6 +292,11 @@ a:hover {
       justify-content: center;
       align-items: center;
       margin: 20px 0; }
+      .wrapper .collections-all-types .filters select {
+        padding: 5px;
+        border: 1px solid #CCC;
+        height: 30px;
+        color: #000; }
       .wrapper .collections-all-types button {
         border-radius: 0px;
         outline: none;

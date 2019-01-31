@@ -1,32 +1,23 @@
 import React from "react";
 import Products from "./Products"
-import ProductsData from "../data/products.json";
+//import ProductsData from "../data/products.json";
+//import Slider from 'react-rangeslider'
+//import 'react-rangeslider/lib/index.css'
 
 class Collections extends React.Component {
-    // show party wear
-    // handleParty(product) {
-    //   console.log(product);
-    //   let tempArray = [];
-    //   // if(product=='All'){
-    //   // }else{}
-    //   {
-    //     ProductsData.map((item) => {
-    //       if (item.category === product) {
-    //         tempArray.push(item);
-    //       }
-    //     })
-    //     console.log(tempArray);
-    //     //ProductsData = tempArray;
-    //   }
-    // }
-
     constructor(props) {
         super(props);
-        this.filterProduct = this.filterProduct.bind(this);
+        // this.filterProduct = this.filterProduct.bind(this);
+        this.state = {
+            showCategory: 'All'
+        }
     }
 
-    filterProduct(e) {
-        alert('clicked')
+    handleCategoryChange(e) {
+        this.setState({
+            showCategory: e.target.value
+        })
+        //console.log(this.state.showCategory);
     }
 
     render() {
@@ -39,21 +30,17 @@ class Collections extends React.Component {
                 <div className="collections-actions"></div>
                 <div className="collections-all">
                     <div className="collections-all-types">
-                        <div className="btn-group" role="group" aria-label="Filter by Options">
-                            {ProductsData.reduce((prd, product) => {
-                                // if (prd.length) {
-                                //   prd.push(product.category)
-                                // }
-                                if (prd.indexOf(product.category) === -1) {
-                                    prd.push(product.category)
-                                }
-                                return prd;
-                            }, []).map(product =>
-                                <button type="button" className="btn" key={product} onClick={this.filterProduct}>{product}</button>
-                            )}
+                        <div className="filters" role="group" aria-label="Filter by Options">
+                            <select className="form-control" onChange={this.handleCategoryChange.bind(this)} >
+                                <option value="All">All</option>
+                                <option value="designer">Designer Wear</option>
+                                <option value="casual">Casual Wear</option>
+                                <option value="party">Party Wear</option>
+                            </select>
+
                         </div>
                     </div>
-                    <Products />
+                    <Products selectedCategory={this.state.showCategory} />
                 </div>
             </div>
         );

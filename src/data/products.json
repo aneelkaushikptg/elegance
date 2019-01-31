@@ -11,7 +11,7 @@
             "one": "01-01.jpg"
         },
         "inCart": false,
-        "category": "Designer Wear",
+        "category": "designer",
         "arrival": "new",
         "liked": false,
         "sizes": {
@@ -25,7 +25,7 @@
     },
     {
         "id": 2,
-        "name": "Champagne Embroidered Gown.",
+        "name": "Champagne Embroidered Gown",
         "description": "Champagne Embroidered Gown.",
         "price": "90,390",
         "type": "shirt",
@@ -37,7 +37,7 @@
             "three": "02-03.jpg"
         },
         "inCart": false,
-        "category": "Designer Wear",
+        "category": "designer",
         "arrival": "new",
         "liked": false,
         "sizes": {
@@ -51,14 +51,14 @@
     },
     {
         "id": 3,
-        "name": "Deep Purple Embroidered Layered Gown",
+        "name": "Deep Purple Embroidered Gown",
         "description": "it’s a very elegant looking draped gown with delicate zardosi and pearl embroidery in the yoke.",
         "price": "46,445",
         "type": "shirt",
         "fabric": "Habutai Silk",
         "coverimg": "03.jpg",
         "inCart": false,
-        "category": "Designer Wear",
+        "category": "party",
         "arrival": "new",
         "liked": false,
         "sizes": {
@@ -72,7 +72,7 @@
     },
     {
         "id": 4,
-        "name": "Powder pink silk crepe georgette sequinned bell-sleeved",
+        "name": "Powder pink silk crepe",
         "description": "Powder pink silk crepe georgette sequinned bell-sleeved Gown",
         "price": "22,508",
         "type": "shirt",
@@ -83,7 +83,7 @@
             "two": "04-02.jpg"
         },
         "inCart": false,
-        "category": "Casual Wear",
+        "category": "casual",
         "arrival": "new",
         "liked": false,
         "sizes": {
@@ -107,7 +107,7 @@
             "one": "05-01.jpg"
         },
         "inCart": false,
-        "category": "Casual Wear",
+        "category": "casual",
         "arrival": "new",
         "liked": false,
         "sizes": {
@@ -121,11 +121,11 @@
     },
     {
         "id": 6,
-        "name": "Mint Green Angarkha Anarkali Set",
+        "name": "Mint Green Angarkha Anarkali",
         "description": "Mint green Angarkha style Anarkali with organza mesh bodice and work on duppata.",
         "price": "42,921",
         "type": "shirt",
-        "category": "Casual Wear",
+        "category": "party",
         "arrival": "new",
         "liked": false,
         "fabric": "-",
