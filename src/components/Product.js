@@ -79,7 +79,7 @@ class Product extends React.Component {
                                 <WhatsappMessage
                                     label="Whatsapp us!" // Required
                                     number='+919700078025'
-                                    textBody={`Hello! Want this ${currentproduct.name} ${imageURL} ${currentproduct.coverimg}`}
+                                    textBody={`Hello! Want this ${currentproduct.name}`}
                                     // textBody=<img src={`${imageURL} ${currentproduct.coverimg}`} />
                                     style={{
                                         color: '#fff', background: '#2CA25F', padding: '10px 15px',
