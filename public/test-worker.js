@@ -1,7 +1,7 @@
 
-var cacheName = 'test';
-self.addEventListener('install', function (e) {
-    console.log('install');
+var cacheName = 'aarohi_cache';
+self.addEventListener('aarohi', function (e) {
+    console.log('aarohi');
     e.waitUntil(
         caches.open(cacheName).then(function (cache) {
             return cache.addAll([
@@ -18,8 +18,8 @@ self.addEventListener('fetch', event => {
         caches.open(cacheName).then(cache =>
             cache.match(event.request, { ignoreSearch: true })
         )
-            .then(response => {
-                return response || fetch(event.request);
-            })
+        .then(response => {
+            return response || fetch(event.request);
+        })
     );
 });

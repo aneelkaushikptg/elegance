@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@okta/okta-signin-widget": "^2.14.0",
+    "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "font-awesome": "^4.7.0",
     "react": "^16.7.0",

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ProductsData from "../data/products.json";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export class Youmaylike extends Component {
     render() {

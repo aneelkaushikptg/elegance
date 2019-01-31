@@ -10,6 +10,7 @@ class Products extends React.Component {
         super(props)
         console.log(this.props);
     }
+
     selectProduct(product) {
         Shared.selectProduct = product;
     }
@@ -25,6 +26,8 @@ class Products extends React.Component {
     }
 
     render() {
+        const imageURL = "../images/products/";
+
         return (
             <div className="collections-all-eachwrap">
                 {ProductsData.map((product) => {
@@ -32,13 +35,13 @@ class Products extends React.Component {
                         <div className="collections-all-eachwrap-each" key={product.id}>
                             <div className="col-img" onClick={() => this.selectProduct(product)}>
                                 <Link to={`/product/${product.id}`}>
-                                    <img alt={product.name} src={product.coverimg} className="img-fluid" />
+                                    <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />
                                 </Link>
                                 <Like liked={product.liked} onClick={() => this.handleLike(product)} />
                             </div>
                             <div className="details">
                                 <h2>{product.name}</h2>
-                                <h3><span>$ </span>{product.price}</h3>
+                                <h3><span>Rs.</span>{product.price}</h3>
                                 <div className="actions">
                                     <Link to={`/product/${product.id}`}>
                                         <button className="btn-border" onClick={() => this.selectProduct(product)}>

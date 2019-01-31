@@ -24,7 +24,7 @@ class Footer extends React.Component {
                             <h2>We are on Instagram</h2>
                             <h3>Follow Us </h3>
                             <p>To get the latest Updates to your Social account.</p>
-                            <a href={"http://" + "www.instagram.com/aarohielegance"} target="_blank" className="followus">
+                            <a href={'http://' + "www.instagram.com/aarohielegance"} target="_blank" rel="aarohielegance" className="followus">
                                 Follow Us now
                              </a>
                         </div>

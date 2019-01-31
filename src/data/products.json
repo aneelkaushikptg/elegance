@@ -1,14 +1,14 @@
 [
     {
         "id": 1,
-        "name": "Light Brown Shirt",
-        "description": "Light Brown Shirt for Women",
-        "price": 4.99,
+        "name": "Plum Halter Neckline Embroidered Dress",
+        "description": "This halter neck all-over floral sequin and bead embroidered dress ensures you stay glam all through the",
+        "price": "50,73313",
         "type": "shirt",
-        "coverimg": "https://image.ibb.co/nNmKz5/img2.jpg",
+        "fabric": "Raw Silk",
+        "coverimg": "01.jpg",
         "images": {
-            "1": "https://image.ibb.co/nNmKz5/img3.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img4.jpg"
+            "one": "01-01.jpg"
         },
         "inCart": false,
         "category": "Designer Wear",
@@ -25,14 +25,16 @@
     },
     {
         "id": 2,
-        "name": "Women Grey Shirt",
-        "description": "Grey Shirt for Women",
-        "price": 14.99,
+        "name": "Champagne Embroidered Gown.",
+        "description": "Champagne Embroidered Gown.",
+        "price": "90,390",
         "type": "shirt",
-        "coverimg": "https://image.ibb.co/n6iMCQ/img3.jpg",
+        "fabric": "Heavy Satin",
+        "coverimg": "02.jpg",
         "images": {
-            "1": "https://image.ibb.co/nNmKz5/img2.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img4.jpg"
+            "one": "02-01.jpg",
+            "two": "02-02.jpg",
+            "three": "02-03.jpg"
         },
         "inCart": false,
         "category": "Designer Wear",
@@ -49,15 +51,12 @@
     },
     {
         "id": 3,
-        "name": "Warm Shirt Women",
-        "description": "Woolen Hoodie Women",
-        "price": 20.00,
+        "name": "Deep Purple Embroidered Layered Gown",
+        "description": "it’s a very elegant looking draped gown with delicate zardosi and pearl embroidery in the yoke.",
+        "price": "46,445",
         "type": "shirt",
-        "coverimg": "https://image.ibb.co/dVfORk/img4.jpg",
-        "images": {
-            "1": "https://image.ibb.co/nNmKz5/img3.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
-        },
+        "fabric": "Habutai Silk",
+        "coverimg": "03.jpg",
         "inCart": false,
         "category": "Designer Wear",
         "arrival": "new",
@@ -73,14 +72,15 @@
     },
     {
         "id": 4,
-        "name": "Women Grey Shirt",
-        "description": "Light Grey Shirt for Women",
-        "price": 4.99,
+        "name": "Powder pink silk crepe georgette sequinned bell-sleeved",
+        "description": "Powder pink silk crepe georgette sequinned bell-sleeved Gown",
+        "price": "22,508",
         "type": "shirt",
-        "coverimg": "https://image.ibb.co/jpMxmk/img5.jpg",
+        "fabric": "Silk Crepe Georgette",
+        "coverimg": "04.jpg",
         "images": {
-            "1": "https://image.ibb.co/nNmKz5/img2.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img3.jpg"
+            "one": "04-01.jpg",
+            "two": "04-02.jpg"
         },
         "inCart": false,
         "category": "Casual Wear",
@@ -97,14 +97,14 @@
     },
     {
         "id": 5,
-        "name": "Women Red/Brown Shirt",
-        "description": "Red/Brown Blouse for Women",
-        "price": 19.99,
+        "name": "Blush Flamingo Organza Gown",
+        "description": "The Flamboyance is an organza gown with machine embroidery details. Its perfect for post wedding shenanigans.",
+        "price": "37,513",
         "type": "blouse",
-        "coverimg": "https://image.ibb.co/mJppz5/img6.jpg",
+        "fabric": "Organza + Silk",
+        "coverimg": "05.jpg",
         "images": {
-            "1": "https://image.ibb.co/nNmKz5/img4.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
+            "one": "05-01.jpg"
         },
         "inCart": false,
         "category": "Casual Wear",
@@ -121,90 +121,19 @@
     },
     {
         "id": 6,
-        "name": "Dark Grey Shirt Women",
-        "description": "Dark Grey Shirt for Women",
+        "name": "Mint Green Angarkha Anarkali Set",
+        "description": "Mint green Angarkha style Anarkali with organza mesh bodice and work on duppata.",
         "price": 6.00,
         "type": "shirt",
         "category": "Casual Wear",
         "arrival": "new",
         "liked": false,
-        "coverimg": "https://image.ibb.co/eZiSmk/img7.jpg",
+        "fabric": "-",
+        "coverimg": "06.jpg",
         "images": {
-            "1": "https://image.ibb.co/nNmKz5/img6.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
+            "one": "06-01.jpg",
+            "two": "06-02.jpg"
         },
-        "sizes": {
-            "XS": false,
-            "S": true,
-            "M": true,
-            "L": true,
-            "XL": true,
-            "XXL": false
-        }
-    },
-    {
-        "id": 7,
-        "name": "White Shirt Women",
-        "description": "White Shirt for Women",
-        "price": 14.99,
-        "type": "shirt",
-        "coverimg": "https://image.ibb.co/dyCysQ/img8.jpg",
-        "images": {
-            "1": "https://image.ibb.co/nNmKz5/img6.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img5.jpg"
-        },
-        "inCart": false,
-        "category": "Casual Wear",
-        "arrival": "old",
-        "liked": false,
-        "sizes": {
-            "XS": false,
-            "S": true,
-            "M": true,
-            "L": true,
-            "XL": true,
-            "XXL": false
-        }
-    },
-    {
-        "id": 8,
-        "name": "Black Shirt Women",
-        "description": "Black Shirt for Women",
-        "price": 20.99,
-        "type": "shirt",
-        "coverimg": "https://image.ibb.co/eOYre5/img10.jpg",
-        "images": {
-            "1": "https://image.ibb.co/nNmKz5/img3.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img6.jpg"
-        },
-        "inCart": false,
-        "category": "Party Wear",
-        "arrival": "old",
-        "liked": false,
-        "sizes": {
-            "XS": false,
-            "S": true,
-            "M": true,
-            "L": true,
-            "XL": true,
-            "XXL": false
-        }
-    },
-    {
-        "id": 9,
-        "name": "No Shoulder Hoodie",
-        "description": "Hoodie for Women",
-        "price": 4.99,
-        "type": "shirt",
-        "coverimg": "https://image.ibb.co/f6gcK5/img9.jpg",
-        "images": {
-            "1": "https://image.ibb.co/nNmKz5/img5.jpg",
-            "2": "https://image.ibb.co/nNmKz5/img7.jpg"
-        },
-        "inCart": false,
-        "category": "Party Wear",
-        "arrival": "old",
-        "liked": false,
         "sizes": {
             "XS": false,
             "S": true,

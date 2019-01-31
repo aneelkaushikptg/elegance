@@ -75,11 +75,11 @@ a:hover {
       flex-flow: row wrap;
       justify-content: center;
       flex: 1 0 auto; }
-      .wrapper .navbar-nav li {
+      .wrapper .navbar-nav .nav-item {
         display: inline-block;
         padding: 0;
         margin: 0 15px; }
-        .wrapper .navbar-nav li a {
+        .wrapper .navbar-nav .nav-item a {
           color: #fff;
           font-size: .7rem;
           font-family: Varela Round,sans-serif;
@@ -89,14 +89,14 @@ a:hover {
           background: #000;
           height: 25px;
           line-height: 25px;
-          padding: 0; }
-          .wrapper .navbar-nav li a.active {
+          padding: 0 10px; }
+          .wrapper .navbar-nav .nav-item a.active {
             background: #ca0030;
             color: #fff; }
-            .wrapper .navbar-nav li a.active:hover {
+            .wrapper .navbar-nav .nav-item a.active:hover {
               background: #ca0030;
               color: #fff; }
-          .wrapper .navbar-nav li a:hover {
+          .wrapper .navbar-nav .nav-item a:hover {
             background: #333;
             color: #fff; }
   .wrapper .btn-prime {
@@ -256,7 +256,9 @@ a:hover {
           list-style-type: none; }
           .wrapper .home-shop ul li:last-child {
             margin-right: 0; }
-          .wrapper .home-shop ul li img {
+          .wrapper .home-shop ul li .imgwrap {
+            max-height: 325px;
+            overflow: hidden;
             border: 1px solid #ebebeb; }
           .wrapper .home-shop ul li h3 {
             color: #282828;
@@ -324,17 +326,17 @@ a:hover {
           .wrapper .collections-all-eachwrap-each .details h2 {
             color: #000;
             margin: 0;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
             font-family: 'Crete Round', serif; }
           .wrapper .collections-all-eachwrap-each .details h3 {
             color: #ca0030;
             margin: 5px 0 0 0;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 600;
             font-family: Open Sans,sans-serif; }
             .wrapper .collections-all-eachwrap-each .details h3 span {
-              font-size: 1rem; }
+              font-size: .8rem; }
           .wrapper .collections-all-eachwrap-each .details .actions {
             padding: 10px 0; }
             .wrapper .collections-all-eachwrap-each .details .actions button {

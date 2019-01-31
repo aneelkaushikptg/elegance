@@ -28,6 +28,7 @@ class App extends Component {
               <Route path="/wishlist" component={Wishlist} />
               <Route path="/login" component={Login} />
               <Redirect from="/" exact to="/home" />
+              <Redirect from="/product:id" exact to="/home" />
             </Switch>
             <Footer />
           </div>

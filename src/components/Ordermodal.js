@@ -17,23 +17,22 @@ class ModalComponent extends React.Component {
             }
         }
         this.handleOrderForm = this.handleOrderForm.bind(this);
-        this.placeOrder = this.placeOrder.bind(this);
+        // this.placeOrder = this.placeOrder.bind(this);
     }
-    placeOrder(e) {
-        // e.preventDefault();
-        const orderList = this.state.order;
-        fetch("https://script.google.com/macros/s/AKfycbySJcUklaoZbEcduLoVeWSsLijMfM17lQz_G-Y_hQ/exec",
-            {
-                method: "post",
-                //make sure to serialize your JSON body
-                body: JSON.stringify(orderList)
-            })
-            .then(function (response) {
-                return response.json();
-            }).then(function (myJson) {
-                console.log(JSON.stringify(myJson));
-            });
-    }
+    // placeOrder(e) {
+    //     const orderList = this.state.order;
+    //     fetch("https://script.google.com/macros/s/AKfycbySJcUklaoZbEcduLoVeWSsLijMfM17lQz_G-Y_hQ/exec",
+    //         {
+    //             method: "post",
+    //             //make sure to serialize your JSON body
+    //             body: JSON.stringify(orderList)
+    //         })
+    //         .then(function (response) {
+    //             return response.json();
+    //         }).then(function (myJson) {
+    //             console.log(JSON.stringify(myJson));
+    //         });
+    // }
 
     handleOrderForm(e) {
         const order = this.state.order;

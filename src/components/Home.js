@@ -10,6 +10,8 @@ class Home extends React.Component {
     }
 
     render() {
+        const imageURL = "../images/products/";
+
         return (
             <div className="home">
                 <div className="home-hero">
@@ -47,11 +49,13 @@ class Home extends React.Component {
                                         if (product.arrival === "new") {
                                             return (
                                                 <li key={product.id} onClick={() => this.selectProduct(product)} className="col-md-3 col-6">
-                                                    <Link to={`/product/${product.id}`}>
-                                                        <img alt={product.name} src={product.coverimg} className="img-fluid" />
-                                                    </Link>
+                                                    <div className="imgwrap">
+                                                        <Link to={`/product/${product.id}`}>
+                                                            <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />
+                                                        </Link>
+                                                    </div>
                                                     <h3>{product.name}</h3>
-                                                    <h4><span>$</span>{product.price}</h4>
+                                                    <h4><span>Rs.</span>{product.price}</h4>
                                                 </li>
                                             )
                                         }

@@ -100,37 +100,36 @@ a {
       flex-flow: row wrap;
       justify-content:center;
       flex: 1 0 auto;
-      li {
-        display:inline-block;
-        padding: 0;
-        margin:0 15px;
-        a {
-          color: #fff;
-          font-size: .7rem;
-          font-family: Varela Round,sans-serif;
-          text-transform: uppercase;
-          font-weight: 600;
-          letter-spacing: 2px;
-          background: #000;
-          height:25px;
-          line-height: 25px;
+        & .nav-item{
+          display:inline-block;
           padding: 0;
-
-          &.active {
-            background: #ca0030;
-            color:#fff;
-            &:hover {
+          margin:0 15px;      
+          a{
+            color: #fff;
+            font-size: .7rem;
+            font-family: Varela Round,sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background: #000;
+            height:25px;
+            line-height: 25px;
+            padding: 0 10px;  
+            &.active {
               background: #ca0030;
+              color:#fff;
+              &:hover {
+                background: #ca0030;
+                color:#fff;
+              }
+            }
+  
+            &:hover {
+              background:#333;
               color:#fff;
             }
           }
-
-          &:hover {
-            background:#333;
-            color:#fff;
-          }
-        }
-      }
+        }  
     }
   }
 
@@ -330,7 +329,9 @@ a {
           &:last-child{
             margin-right: 0;
           }
-          img{
+          & .imgwrap{
+            max-height:325px;
+            overflow: hidden;
             border:1px solid #ebebeb;
           }
           h3{
@@ -415,18 +416,18 @@ a {
           h2{
             color:#000;
             margin:0;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 500;
             font-family: 'Crete Round', serif;
           }
           h3{
             color:#ca0030;
             margin:5px 0 0 0;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 600;
             font-family: Open Sans,sans-serif;
             span{
-              font-size: 1rem;
+              font-size: .8rem;
             }
           }
           & .actions{
