@@ -83,7 +83,9 @@ class Product extends React.Component {
                                     // textBody=<img src={`${imageURL} ${currentproduct.coverimg}`} />
                                     style={{
                                         color: '#fff', background: '#2CA25F', padding: '10px 15px',
-                                        borderRadius: '10px'
+                                        marginTop: '10px', fontweight: '500', fontfamily: 'Crete Round',
+                                        padding: '5px 25px', textalign: 'center', marginRight: '20px', border: 'none',
+                                        borderRadius: '25px', float: 'left'
                                     }}
                                 />
                                 <Like liked={currentproduct.liked} onClick={() => this.handleLike(currentproduct)} />

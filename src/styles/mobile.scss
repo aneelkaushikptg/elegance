@@ -31,6 +31,12 @@
                 ul{
                     li{
                         margin-bottom:15px;
+                        h4{
+                            font-size:14px;
+                            span{
+                                font-size: 12px;
+                            }
+                        }
                     }
                 }
             }
@@ -42,7 +48,7 @@
                     width: calc((100%)/2);
                     margin: 0;
                     & .col-img{
-                        height:auto;
+                        max-height:250px;
                     }
                     & .details{
                         h2{
