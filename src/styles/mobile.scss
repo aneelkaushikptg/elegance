@@ -11,7 +11,7 @@
             }
         }
         & .like{
-            font-size: 16px;
+            font-size: 20px;
         }
         & .home{
             &-hero{
@@ -31,6 +31,9 @@
                 ul{
                     li{
                         margin-bottom:15px;
+                        & .imgwrap{
+                            max-height: 235px;
+                        }
                         h4{
                             font-size:14px;
                             span{
@@ -45,19 +48,25 @@
            &-all{
                &-eachwrap{
                 &-each{
-                    width: calc((100%)/2);
-                    margin: 0;
+                    width: calc((100%)/2 - .5rem);
+                    margin: 0 .5rem .5rem 0;
+                    &:nth-child(3){
+                        margin-right: auto;
+                    }
                     & .col-img{
                         max-height:250px;
                     }
                     & .details{
                         h2{
                             font-size: 13px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
                         }
                         h3{
                             font-size: 14px;
                             span{
-                                font-size:12px;
+                               font-size:12px;
                             }
                         }
                         & .actions{
@@ -72,7 +81,15 @@
                 }
                }
             }   
-        }       
+        }     
+        & .product{
+            &-one{
+                padding: 0;
+            }
+            &-two{
+                padding: 0;
+            }
+        }  
         .footer{
             &-subscribe{ 
               padding: 2rem;
@@ -135,9 +152,16 @@
                 }      
               }
             }
-            &-foot{
+            &-foot{               
+                & .copy{
+                    text-align: left;
+                }
+                ul{
+                    text-align: left;
+                }
              & .footlogo{
                  font-size: .7rem;
+                 text-align: left;
               }
             }
         }

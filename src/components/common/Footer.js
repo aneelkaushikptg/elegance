@@ -51,13 +51,13 @@ class Footer extends React.Component {
                 <div className="footer-foot">
                     <div className="container">
                         <div className="row">
-                            <div className="col-3 footlogo">
+                            <div className="col-md-3 col-12 footlogo">
                                 Aarohi Elegance
                         </div>
-                            <div className="col-5 copy">
+                            <div className="col-md-5 col-12 copy">
                                 &copy; All Rights Reserved @ Aarohi elegeance 2018
                         </div>
-                            <div className="col-4">
+                            <div className="col-md-4 col-12">
                                 <ul>
                                     <li>
                                         <Link to={`/home`}>Home</Link>

@@ -4,7 +4,7 @@
   .wrapper .inner-head p {
     font-size: 13px; }
   .wrapper .like {
-    font-size: 16px; }
+    font-size: 20px; }
   .wrapper .home-hero {
     height: auto;
     padding: 50px 20px; }
@@ -16,17 +16,24 @@
     padding: 20px 0; }
     .wrapper .home-shop ul li {
       margin-bottom: 15px; }
+      .wrapper .home-shop ul li .imgwrap {
+        max-height: 235px; }
       .wrapper .home-shop ul li h4 {
         font-size: 14px; }
         .wrapper .home-shop ul li h4 span {
           font-size: 12px; }
   .wrapper .collections-all-eachwrap-each {
-    width: calc((100%)/2);
-    margin: 0; }
+    width: calc((100%)/2 - .5rem);
+    margin: 0 .5rem .5rem 0; }
+    .wrapper .collections-all-eachwrap-each:nth-child(3) {
+      margin-right: auto; }
     .wrapper .collections-all-eachwrap-each .col-img {
       max-height: 250px; }
     .wrapper .collections-all-eachwrap-each .details h2 {
-      font-size: 13px; }
+      font-size: 13px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
     .wrapper .collections-all-eachwrap-each .details h3 {
       font-size: 14px; }
       .wrapper .collections-all-eachwrap-each .details h3 span {
@@ -37,6 +44,10 @@
         font-size: 10px;
         margin-right: 5px;
         padding: 3px 8px; }
+  .wrapper .product-one {
+    padding: 0; }
+  .wrapper .product-two {
+    padding: 0; }
   .wrapper .footer-subscribe {
     padding: 2rem; }
     .wrapper .footer-subscribe h2 {
@@ -81,8 +92,13 @@
       .wrapper .footer-insta-right .instaimg a img {
         height: 60px;
         width: 60px; }
+  .wrapper .footer-foot .copy {
+    text-align: left; }
+  .wrapper .footer-foot ul {
+    text-align: left; }
   .wrapper .footer-foot .footlogo {
-    font-size: .7rem; }
+    font-size: .7rem;
+    text-align: left; }
   .wrapper .navbar {
     width: 100%;
     padding: 8px;
