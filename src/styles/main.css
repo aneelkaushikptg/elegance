@@ -301,6 +301,7 @@ a:hover {
           .wrapper .collections-all-types .filters .row label {
             font-size: 12px; }
           .wrapper .collections-all-types .filters .row select {
+            font-size: 14px;
             padding: 5px;
             border: 1px solid #CCC;
             height: 30px;
@@ -765,6 +766,29 @@ a:hover {
       width: 400px; }
       .wrapper .login-inner h2 {
         margin-bottom: 20px; }
+  .wrapper .rangeSlider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center; }
+    .wrapper .rangeSlider .rangeslider__fill {
+      background: #000; }
+    .wrapper .rangeSlider .rangeslider__label-item {
+      font-size: 12px;
+      font-family: 'Open Sans', sans-serif; }
+    .wrapper .rangeSlider .rangeslider-horizontal {
+      height: 3px;
+      width: 100%; }
+    .wrapper .rangeSlider .rangeslider__handle {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      box-shadow: none; }
+      .wrapper .rangeSlider .rangeslider__handle:after {
+        width: 10px;
+        height: 10px;
+        top: 4px;
+        left: 4px; }
 
 .fi {
   font-family: "Flaticon"; }

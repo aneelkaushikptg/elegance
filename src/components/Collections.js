@@ -58,6 +58,14 @@ class Collections extends React.Component {
                     <div className="collections-all-types">
                         <div className="filters" role="group" aria-label="Filter by Options">
                             <div className="row">
+                            <div className="col-md-2">
+                                    <label>Gender</label>
+                                    <select name="sortby" className="form-control" onChange={this.handleSortChange.bind(this)} >
+                                        <option value="All">All</option>
+                                        <option value="Women">Women</option>
+                                        <option value="Kids">Kids</option>
+                                    </select>
+                                </div>
                                 <div className="col-md-3">
                                     <label>Choose Category</label>
                                     <select name="categorytype" className="form-control" onChange={this.handleCategoryChange.bind(this)} >
@@ -74,15 +82,7 @@ class Collections extends React.Component {
                                         value={horizontal}
                                         labels={horizontalLabels}
                                         onChange={this.handleChangeHorizontal} />
-                                </div>
-                                <div className="col-md-2">
-                                    <label>Gender</label>
-                                    <select name="sortby" className="form-control" onChange={this.handleSortChange.bind(this)} >
-                                        <option value="All">All</option>
-                                        <option value="Women">Women</option>
-                                        <option value="Kids">Kids</option>
-                                    </select>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
