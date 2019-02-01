@@ -443,6 +443,16 @@ a:hover {
       display: flex; }
       .wrapper .product-two img {
         align-self: center; }
+    .wrapper .product-extradetails .tab-pane {
+      padding: 10px; }
+      .wrapper .product-extradetails .tab-pane .shippingdetails table tr td {
+        font-family: Open Sans,sans-serif; }
+      .wrapper .product-extradetails .tab-pane .shippingdetails h4 {
+        margin-top: 20px; }
+      .wrapper .product-extradetails .tab-pane .shippingdetails p {
+        font-size: 14px;
+        margin-bottom: 5px;
+        font-family: Open Sans,sans-serif; }
     .wrapper .product .maylike {
       padding: 2rem;
       display: flex;

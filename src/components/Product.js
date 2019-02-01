@@ -5,28 +5,31 @@ import Like from "../components/common/Like";
 import Ordermodal from "../components/Ordermodal";
 import { WhatsappMessage } from 'react-message-router';
 import ProductsData from "../data/products.json";
+import { TabContent, TabPane, Nav, NavItem, NavLink, Table, Row, Col } from 'reactstrap';
+import classnames from 'classnames';
+
 let productsdata;
 class Product extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         ProductsData: []
-    //     };
-    // }
-
-    // componentDidMount() {
-    //     const { match: { params } } = this.props;
-    //     this.setState({ ProductsData: ProductsData });
-    // }
-
     constructor(props) {
         super(props);
+        this.toggle = this.toggle.bind(this);
         this.state = {
-            showPopup: false
+            showPopup: false,
+            activeTab: '1'
         };
         productsdata = ProductsData;
     }
 
+    // for reactstrap tabs
+    toggle(tab) {
+        if (this.state.activeTab !== tab) {
+            this.setState({
+                activeTab: tab
+            });
+        }
+    }
+
+    // order popup 
     togglePopup() {
         this.setState({
             showPopup: !this.state.showPopup
@@ -35,19 +38,18 @@ class Product extends React.Component {
 
     render() {
         const imageURL = "../images/products/";
-
         // const product = find(ProductsData, ['id', parseInt(this.props.match.params.id)]);
         let currentproduct = {};
+        let images1 = [];
         if (Shared.selectProduct) {
             currentproduct = Shared.selectProduct;
+            images1 = currentproduct.images;
+            console.log(images1);
         } else {
             // alert("Hi");
             window.location.pathname = "/collections";
         }
 
-        //ProductsData[this.props.params.id]
-        //console.log(currentproduct);
-        // const { showModal } = this.state;
         return (
             <div className="container">
                 {this.state.showPopup ? (
@@ -94,6 +96,71 @@ class Product extends React.Component {
                     </div>
                     <div className="col-12 col-md-4 product-two">
                         <img alt={currentproduct.name} src={`${imageURL}${currentproduct.coverimg}`} className="img-fluid" />
+                    </div>
+                    <div class="product-extradetails">
+                        <Nav tabs>
+                            <NavItem>
+                                <NavLink
+                                    className={classnames({ active: this.state.activeTab === '1' })}
+                                    onClick={() => { this.toggle('1'); }}>More Images
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink
+                                    className={classnames({ active: this.state.activeTab === '2' })}
+                                    onClick={() => { this.toggle('2'); }}>Shipping &amp; Return
+                                </NavLink>
+                            </NavItem>
+                        </Nav>
+                        <TabContent activeTab={this.state.activeTab}>
+                            <TabPane tabId="1">
+                                <Row>
+                                    <Col sm="12">
+                                        {images1.map((image) => {
+                                            return <img alt={image} src={`${imageURL}${image}`} className="img-fluid" />
+                                        })
+                                        }
+                                    </Col>
+                                </Row>
+                            </TabPane>
+                            <TabPane tabId="2">
+                                <div className="shippingdetails">
+                                    <p>
+                                        We provide the cash on delivery service,where our courier partners
+                                        have the provisions to allow such a form of collection.Please ensure
+                                        your delivery address is correct when you check out on your purchase,
+                                        based on which you may or may not get a COD option.
+                                    </p>
+                                    <p>
+                                        NOTE: There might be a slight variation in the shade of the actual product
+                                        and the image shown on the screen, due to the screen resolution and photography
+                                        effects.
+                                    </p>
+                                    <h4>Duration:</h4>
+                                    <Table>
+                                        <thead>
+                                            <tr>
+                                                <th>Within India</th>
+                                                <th>Outside India</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">7 - 10 Business Days</td>
+                                                <td>10 - 15 Business Days</td>
+                                            </tr>
+                                        </tbody>
+                                    </Table>
+                                    <h4>Return:</h4>
+                                    <p>
+                                        Return/Exchange: If you are not completely satisfied with your purchase,
+                                        simply select the option of return/exchange within 15 days of receiving your
+                                        order from your order details page and we will process your return, no questions
+                                         asked.
+                                    </p>
+                                </div>
+                            </TabPane>
+                        </TabContent>
                     </div>
                 </div>
             </div >

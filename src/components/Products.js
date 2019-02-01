@@ -17,6 +17,7 @@ class Products extends React.Component {
         }
     }
 
+    //fetch selectedproduct
     selectProduct(product) {
         Shared.selectProduct = product;
     }
@@ -66,12 +67,9 @@ class Products extends React.Component {
                 }
             })
         }
-
     }
 
     render() {
-        // const filterby = this.props.selectedCategory;
-        // const rangefilter = this.props.rangeFilter;
         const imageURL = "../images/products/";
         this.onloadfun();
         return (
@@ -103,7 +101,5 @@ class Products extends React.Component {
         );
     }
 }
-
-
 
 export default Products;
