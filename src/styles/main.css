@@ -292,11 +292,19 @@ a:hover {
       justify-content: center;
       align-items: center;
       margin: 20px 0; }
-      .wrapper .collections-all-types .filters select {
-        padding: 5px;
-        border: 1px solid #CCC;
-        height: 30px;
-        color: #000; }
+      .wrapper .collections-all-types .filters {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%; }
+        .wrapper .collections-all-types .filters .row {
+          width: 100%; }
+          .wrapper .collections-all-types .filters .row label {
+            font-size: 12px; }
+          .wrapper .collections-all-types .filters .row select {
+            padding: 5px;
+            border: 1px solid #CCC;
+            height: 30px;
+            color: #000; }
       .wrapper .collections-all-types button {
         border-radius: 0px;
         outline: none;

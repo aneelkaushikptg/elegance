@@ -382,12 +382,21 @@ a {
         align-items:center;
         margin:20px 0;
         & .filters{
-          select{
-            padding: 5px;
-            border:1px solid #CCC;
-            height: 30px;
-            color:#000;
-          }
+          display: flex;
+          flex-flow: row wrap;
+          width: 100%;
+          & .row{
+            width:100%;
+            label{
+              font-size: 12px;
+            }
+            select{
+              padding: 5px;
+              border:1px solid #CCC;
+              height: 30px;
+              color:#000;
+            }
+          }         
         }
         button{
           border-radius: 0px; 

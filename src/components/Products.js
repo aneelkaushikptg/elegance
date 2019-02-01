@@ -4,15 +4,17 @@ import ProductsData from "../data/products.json";
 import Like from "../components/common/Like";
 import Shared from "../services/shared";
 
-let finalData = ProductsData;;
+let finalData = ProductsData;
 class Products extends React.Component {
     // getting the selected product and passing to product page
     constructor(props) {
         super(props)
         this.onloadfun();
         this.state = {
-            showCategory: 'All'
-        };
+            horizontal: 60,
+            showCategory: 'All',
+            showBySort: 'Latest'
+        }
     }
 
     selectProduct(product) {
@@ -23,26 +25,53 @@ class Products extends React.Component {
     handleLike(product) {
         let products = ProductsData;
         const index = products.indexOf(product);
-        // products[index] = { ...products[index] };
         products[index].liked = !products[index].liked;
         this.setState({ products });
         // Shared.likeProduct = product;
     }
 
     onloadfun() {
-        console.log(this.props.selectedCategory);
+        //console.log(this.props.selectedCategory);
         const filterby = this.props.selectedCategory;
-        //finalData = ProductsData.filter(e=> e.category == this.props.filterBy);
+        const rangefilter = this.props.rangeFilter;
+        const sortbyGender = this.props.sortByGender;
 
-        if (filterby === "All") {
+        // filtering by individual Category
+        if (filterby === "All" && rangefilter == 60 && sortbyGender === "All") {
             finalData = ProductsData;
-        } else {
-            finalData = ProductsData.filter(e => e.category == filterby);
+            //sorting data for Category only
+        } else if (filterby !== "All" && rangefilter >= rangefilter && sortbyGender === "All") {
+            finalData = [];
+            ProductsData.forEach(e => {
+                if (e.category <= filterby) {
+                    finalData.push(e);
+                }
+            })
         }
+        //sorting data for Range only
+        else if (filterby === "All" && rangefilter >= rangefilter && sortbyGender === "All") {
+            finalData = [];
+            ProductsData.forEach(e => {
+                if (e.range <= rangefilter) {
+                    finalData.push(e);
+                }
+            })
+        }
+        //sorting data for Gender only
+        else if (filterby === "All" && rangefilter === 60 && sortbyGender != "All") {
+            finalData = [];
+            ProductsData.forEach(e => {
+                if (e.gender === sortbyGender) {
+                    finalData.push(e);
+                }
+            })
+        }
+
     }
 
     render() {
-        const filterby = this.props.selectedCategory;
+        // const filterby = this.props.selectedCategory;
+        // const rangefilter = this.props.rangeFilter;
         const imageURL = "../images/products/";
         this.onloadfun();
         return (
