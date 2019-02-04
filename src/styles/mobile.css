@@ -1,4 +1,6 @@
 @media (min-width: 320px) and (max-width: 767px) {
+  .wrapper .bgbtn {
+    margin-bottom: 10px; }
   .wrapper .inner-head h1 {
     font-size: 1.5rem; }
   .wrapper .inner-head p {

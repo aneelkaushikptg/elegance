@@ -1,5 +1,10 @@
 .wrapper{
     @media (min-width: 320px) and (max-width:767px) { 
+
+        & .bgbtn{
+            margin-bottom:10px;
+        }
+
         & .inner{
             &-head{
                 h1 {
