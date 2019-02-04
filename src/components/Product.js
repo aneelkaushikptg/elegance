@@ -62,7 +62,7 @@ class Product extends React.Component {
                             <Link to={`/collections`} className="back"><i className="fi flaticon-left-arrow"></i> Back to Collections</Link>
                             <h1>{currentproduct.name}</h1>
                             <div className="price">
-                                <span>Rs.</span> {currentproduct.price}
+                                <span>Rs.{currentproduct.price}</span> <span className="finalprice">Rs.{currentproduct.finalprice}</span>
                             </div>
                             <p>Short Dress in patterned jersey with narrow shoulder straps that cross and tie at the back,
                                 a double-layered bodice at the front, seam at the waist and gently flared.</p>
@@ -84,10 +84,9 @@ class Product extends React.Component {
                                     textBody={`Hello! Want this ${currentproduct.name}`}
                                     // textBody=<img src={`${imageURL} ${currentproduct.coverimg}`} />
                                     style={{
-                                        color: '#fff', background: '#2CA25F', padding: '10px 15px',
-                                        marginTop: '10px', fontweight: '500', fontfamily: 'Crete Round',
-                                        padding: '5px 25px', textalign: 'center', marginRight: '20px', border: 'none',
-                                        borderRadius: '25px', float: 'left'
+                                        color: '#fff', background: '#2CA25F',fontweight: '500', fontfamily: 'Crete Round',
+                                        padding: '8px 25px', textalign: 'center', marginRight: '20px', border: 'none',
+                                        borderRadius: '25px', float: 'left', fontSize: '1rem',fontWeight:'600'
                                     }}
                                 />
                                 <Like liked={currentproduct.liked} onClick={() => this.handleLike(currentproduct)} />
@@ -115,7 +114,7 @@ class Product extends React.Component {
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
                                 <Row>
-                                    <Col sm="12">
+                                    <Col sm="6">
                                         {images1.map((image) => {
                                             return <img alt={image} src={`${imageURL}${image}`} className="img-fluid" />
                                         })

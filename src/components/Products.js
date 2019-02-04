@@ -32,7 +32,6 @@ class Products extends React.Component {
     }
 
     onloadfun() {
-        //console.log(this.props.selectedCategory);
         const filterby = this.props.selectedCategory;
         const rangefilter = this.props.rangeFilter;
         const sortbyGender = this.props.sortByGender;
@@ -67,6 +66,12 @@ class Products extends React.Component {
                 }
             })
         }
+
+        //handling finalprice in looping
+        finalData.forEach((item) => {
+            const discountedPrice = (item.price * item.discount) / 100;
+            item.finalprice = Math.round(item.price - discountedPrice);
+        })
     }
 
     render() {
@@ -78,6 +83,7 @@ class Products extends React.Component {
                     return (
                         <div className="collections-all-eachwrap-each" key={product.id}>
                             <div className="col-img" onClick={() => this.selectProduct(product)}>
+                                {product.discount > 0 && (<div className="discountag">{product.discount}%</div>)}
                                 <Link to={`/product/${product.id}`}>
                                     <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />
                                 </Link>
@@ -85,7 +91,7 @@ class Products extends React.Component {
                             </div>
                             <div className="details">
                                 <h2>{product.name}</h2>
-                                <h3><span>Rs.</span>{product.price}</h3>
+                                <h3><span>Rs.{product.price}</span> <span className="finalprice">Rs.{product.finalprice}</span></h3>
                                 <div className="actions">
                                     <Link to={`/product/${product.id}`}>
                                         <button className="btn-border" onClick={() => this.selectProduct(product)}>

@@ -343,6 +343,20 @@ a:hover {
           height: 25rem;
           overflow: hidden;
           position: relative; }
+          .wrapper .collections-all-eachwrap-each .col-img .discountag {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            height: 32px;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 500;
+            background: #ca0030;
+            border-radius: 50%;
+            width: 32px;
+            font-family: Open Sans,sans-serif;
+            text-align: center;
+            line-height: 32px; }
         .wrapper .collections-all-eachwrap-each .details {
           padding: 10px;
           text-align: center; }
@@ -359,7 +373,15 @@ a:hover {
             font-weight: 600;
             font-family: Open Sans,sans-serif; }
             .wrapper .collections-all-eachwrap-each .details h3 span {
-              font-size: .8rem; }
+              font-size: .8rem;
+              text-decoration: line-through; }
+              .wrapper .collections-all-eachwrap-each .details h3 span.finalprice {
+                color: green;
+                font-size: 1rem;
+                font-weight: 600;
+                text-decoration: none;
+                font-family: Open Sans,sans-serif;
+                margin-left: 5px; }
           .wrapper .collections-all-eachwrap-each .details .actions {
             padding: 10px 0; }
             .wrapper .collections-all-eachwrap-each .details .actions button {
@@ -387,7 +409,15 @@ a:hover {
           font-weight: 600;
           font-family: 'Open Sans', sans-serif; }
           .wrapper .product-one-content .price span {
-            font-size: 1rem; }
+            font-size: 1rem;
+            text-decoration: line-through; }
+            .wrapper .product-one-content .price span.finalprice {
+              color: green;
+              font-size: 1.5rem;
+              font-weight: 600;
+              text-decoration: none;
+              font-family: Open Sans,sans-serif;
+              margin-left: 5px; }
         .wrapper .product-one-content h1 {
           font-size: 2.5rem;
           font-weight: 500;
