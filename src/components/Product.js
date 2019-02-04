@@ -84,9 +84,9 @@ class Product extends React.Component {
                                     textBody={`Hello! Want this ${currentproduct.name}`}
                                     // textBody=<img src={`${imageURL} ${currentproduct.coverimg}`} />
                                     style={{
-                                        color: '#fff', background: '#2CA25F',fontweight: '500', fontfamily: 'Crete Round',
+                                        color: '#fff', background: '#2CA25F', fontweight: '500', fontfamily: 'Crete Round',
                                         padding: '8px 25px', textalign: 'center', marginRight: '20px', border: 'none',
-                                        borderRadius: '25px', float: 'left', fontSize: '1rem',fontWeight:'600'
+                                        borderRadius: '25px', float: 'left', fontSize: '1rem', fontWeight: '600'
                                     }}
                                 />
                                 <Like liked={currentproduct.liked} onClick={() => this.handleLike(currentproduct)} />
@@ -114,12 +114,14 @@ class Product extends React.Component {
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
                                 <Row>
-                                    <Col sm="6">
-                                        {images1.map((image) => {
-                                            return <img alt={image} src={`${imageURL}${image}`} className="img-fluid" />
-                                        })
-                                        }
-                                    </Col>
+                                    {images1.map((image) => {
+                                        return(
+                                        <Col sm="6">
+                                            <img alt={image} src={`${imageURL}${image}`} className="img-fluid" />
+                                        </Col>
+                                        )
+                                    })
+                                    }
                                 </Row>
                             </TabPane>
                             <TabPane tabId="2">
