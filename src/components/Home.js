@@ -9,9 +9,17 @@ class Home extends React.Component {
         Shared.selectProduct = product;
     }
 
-    render() {
-        const imageURL = "../images/products/";
+    //handling finalprice in looping
+    onloadGetFinalPrice() {
+        ProductsData.forEach((item) => {
+            const discountedPrice = (item.price * item.discount) / 100;
+            item.finalprice = Math.round(item.price - discountedPrice);
+        })
+    }
 
+    render() {
+        this.onloadGetFinalPrice();
+        const imageURL = "../images/products/";
         return (
             <div className="home">
                 <div className="home-hero">
@@ -55,7 +63,7 @@ class Home extends React.Component {
                                                         </Link>
                                                     </div>
                                                     <h3>{product.name}</h3>
-                                                    <h4><span>Rs.</span>{product.price}</h4>
+                                                    <h4><span>₹{product.price}</span> <span className="finalprice">₹{product.finalprice}</span></h4>
                                                 </li>
                                             )
                                         }

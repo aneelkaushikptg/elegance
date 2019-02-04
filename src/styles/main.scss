@@ -349,6 +349,17 @@ a {
             span{
               font-size: .8rem;
               font-family: Open Sans,sans-serif;
+              text-decoration:line-through;
+              text-decoration-style: solid;
+              text-decoration-color:#ca0030;
+              color:#999;
+              font-weight: 500;
+              &.finalprice{
+                font-size: .8rem;
+                text-decoration: none;
+                color:green;
+                font-weight: 600;
+              }
             }
           }
         }
@@ -469,14 +480,16 @@ a {
             font-family: 'Crete Round', serif;
           }
           h3{
-            color:#ca0030;
+            color:#999;
             margin:5px 0 0 0;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 500;
             font-family: Open Sans,sans-serif;
             span{
-              font-size: .8rem;
+              font-size: 1rem;
               text-decoration:line-through;
+              text-decoration-style: solid;
+              text-decoration-color:#ca0030;
               &.finalprice{
                 color:green;    
                 font-size: 1rem;
@@ -518,14 +531,17 @@ a {
           font-size: 13px;
         }
         & .price{
-          color:#ca0030;
+          color:#828282;
           font-size:1.5rem;
           font-weight:600;
           font-family: 'Open Sans', sans-serif;
           span{
             font-size: 1rem;
-            text-decoration: line-through;
-
+            text-decoration:line-through;
+              text-decoration-style: solid;
+              text-decoration-color:#ca0030;
+              font-weight: 500;
+              color:#999;
             &.finalprice{
               color:green;    
               font-size: 1.5rem;

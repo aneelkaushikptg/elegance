@@ -178,40 +178,16 @@
             &-toggler{
                 background:url(../images/menu.png);  
                 background-size:24px;
-                background-repeat:no-repeat;              
+                background-repeat:no-repeat;  
+                width: 30px;
+                height: 30px;
+                padding: 0;
+                margin-bottom:10px;            
             }
             &-nav {
               li {
-                display:inline-block;
-                padding: 0;
-                margin:0 15px;
-                width:100%;
-                a {
-                  color: #000;
-                  font-size: .7rem;
-                  font-family: Varela Round,sans-serif;
-                  text-transform: uppercase;
-                  font-weight: 600;
-                  letter-spacing: 2px;
-                  background:none;
-                  height:25px;
-                  line-height: 25px;
-                  padding: 0;
-        
-                  &.active {
-                    background: #ca0030;
-                    color:#fff;
-                    &:hover {
-                      background: #ca0030;
-                      color:#fff;
-                    }
-                  }
-        
-                  &:hover {
-                    background:#333;
-                    color:#fff;
-                  }
-                }
+                margin: 0 0 1px 0!important;
+                width: 100%;                
               }
             }
           }

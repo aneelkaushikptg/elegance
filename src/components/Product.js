@@ -62,7 +62,7 @@ class Product extends React.Component {
                             <Link to={`/collections`} className="back"><i className="fi flaticon-left-arrow"></i> Back to Collections</Link>
                             <h1>{currentproduct.name}</h1>
                             <div className="price">
-                                <span>Rs.{currentproduct.price}</span> <span className="finalprice">Rs.{currentproduct.finalprice}</span>
+                                <span>₹{currentproduct.price}</span> <span className="finalprice">₹{currentproduct.finalprice}</span>
                             </div>
                             <p>Short Dress in patterned jersey with narrow shoulder straps that cross and tie at the back,
                                 a double-layered bodice at the front, seam at the waist and gently flared.</p>
@@ -96,7 +96,7 @@ class Product extends React.Component {
                     <div className="col-12 col-md-4 product-two">
                         <img alt={currentproduct.name} src={`${imageURL}${currentproduct.coverimg}`} className="img-fluid" />
                     </div>
-                    <div class="product-extradetails">
+                    <div className="product-extradetails">
                         <Nav tabs>
                             <NavItem>
                                 <NavLink
@@ -114,11 +114,13 @@ class Product extends React.Component {
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
                                 <Row>
+                                    {currentproduct.images.length === 0 && <p>No Images Found</p>}
+
                                     {images1.map((image) => {
-                                        return(
-                                        <Col sm="6">
-                                            <img alt={image} src={`${imageURL}${image}`} className="img-fluid" />
-                                        </Col>
+                                        return (
+                                            <Col sm="6">
+                                                <img alt={image} src={`${imageURL}${image}`} className="img-fluid" />
+                                            </Col>
                                         )
                                     })
                                     }

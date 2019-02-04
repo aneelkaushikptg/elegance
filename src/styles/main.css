@@ -273,7 +273,17 @@ a:hover {
             font-family: Open Sans,sans-serif; }
             .wrapper .home-shop ul li h4 span {
               font-size: .8rem;
-              font-family: Open Sans,sans-serif; }
+              font-family: Open Sans,sans-serif;
+              text-decoration: line-through;
+              text-decoration-style: solid;
+              text-decoration-color: #ca0030;
+              color: #999;
+              font-weight: 500; }
+              .wrapper .home-shop ul li h4 span.finalprice {
+                font-size: .8rem;
+                text-decoration: none;
+                color: green;
+                font-weight: 600; }
   .wrapper .about-intro {
     padding-top: 2rem;
     padding-bottom: 2rem; }
@@ -367,14 +377,16 @@ a:hover {
             font-weight: 500;
             font-family: 'Crete Round', serif; }
           .wrapper .collections-all-eachwrap-each .details h3 {
-            color: #ca0030;
+            color: #999;
             margin: 5px 0 0 0;
             font-size: 1rem;
-            font-weight: 600;
+            font-weight: 500;
             font-family: Open Sans,sans-serif; }
             .wrapper .collections-all-eachwrap-each .details h3 span {
-              font-size: .8rem;
-              text-decoration: line-through; }
+              font-size: 1rem;
+              text-decoration: line-through;
+              text-decoration-style: solid;
+              text-decoration-color: #ca0030; }
               .wrapper .collections-all-eachwrap-each .details h3 span.finalprice {
                 color: green;
                 font-size: 1rem;
@@ -404,13 +416,17 @@ a:hover {
           color: #ca0030;
           font-size: 13px; }
         .wrapper .product-one-content .price {
-          color: #ca0030;
+          color: #828282;
           font-size: 1.5rem;
           font-weight: 600;
           font-family: 'Open Sans', sans-serif; }
           .wrapper .product-one-content .price span {
             font-size: 1rem;
-            text-decoration: line-through; }
+            text-decoration: line-through;
+            text-decoration-style: solid;
+            text-decoration-color: #ca0030;
+            font-weight: 500;
+            color: #999; }
             .wrapper .product-one-content .price span.finalprice {
               color: green;
               font-size: 1.5rem;

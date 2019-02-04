@@ -91,7 +91,7 @@ class Products extends React.Component {
                             </div>
                             <div className="details">
                                 <h2>{product.name}</h2>
-                                <h3><span>Rs.{product.price}</span> <span className="finalprice">Rs.{product.finalprice}</span></h3>
+                                <h3><span>₹{product.price}</span> <span className="finalprice">₹{product.finalprice}</span></h3>
                                 <div className="actions">
                                     <Link to={`/product/${product.id}`}>
                                         <button className="btn-border" onClick={() => this.selectProduct(product)}>

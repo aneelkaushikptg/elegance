@@ -109,32 +109,14 @@
     .wrapper .navbar-toggler {
       background: url(../images/menu.png);
       background-size: 24px;
-      background-repeat: no-repeat; }
-    .wrapper .navbar-nav li {
-      display: inline-block;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 30px;
       padding: 0;
-      margin: 0 15px;
+      margin-bottom: 10px; }
+    .wrapper .navbar-nav li {
+      margin: 0 0 1px 0 !important;
       width: 100%; }
-      .wrapper .navbar-nav li a {
-        color: #000;
-        font-size: .7rem;
-        font-family: Varela Round,sans-serif;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 2px;
-        background: none;
-        height: 25px;
-        line-height: 25px;
-        padding: 0; }
-        .wrapper .navbar-nav li a.active {
-          background: #ca0030;
-          color: #fff; }
-          .wrapper .navbar-nav li a.active:hover {
-            background: #ca0030;
-            color: #fff; }
-        .wrapper .navbar-nav li a:hover {
-          background: #333;
-          color: #fff; }
   .wrapper .login-inner {
     padding: 30px 25px;
     width: 300px; } }

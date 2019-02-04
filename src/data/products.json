@@ -65,10 +65,7 @@
         "gender": "Women",
         "fabric": "Habutai Silk",
         "coverimg": "03.jpg",
-        "images": [
-            "03-01.jpg",
-            "03-02.jpg"
-        ],
+        "images": [],
         "inCart": false,
         "category": "party",
         "arrival": "new",
