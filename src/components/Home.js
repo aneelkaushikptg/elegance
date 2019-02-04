@@ -37,7 +37,7 @@ class Home extends React.Component {
                         <h2>Behind the brand</h2>
                         <p>Drawing inspiration from art, architecture, and global culture, Aarohi Elegance
                           designs with elegant sophistication, a refined statement that beautifies
-                  women and glorifies their personality.</p>
+                          women and glorifies their personality.</p>
                         <Link to="/about" className="btn btn-border m-t-20">
                             knowmore
                   </Link>

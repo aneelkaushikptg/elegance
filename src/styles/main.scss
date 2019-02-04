@@ -357,7 +357,7 @@ a {
               &.finalprice{
                 font-size: .8rem;
                 text-decoration: none;
-                color:green;
+                color:#ca0030;
                 font-weight: 600;
               }
             }
@@ -491,7 +491,7 @@ a {
               text-decoration-style: solid;
               text-decoration-color:#ca0030;
               &.finalprice{
-                color:green;    
+                color:#ca0030;    
                 font-size: 1rem;
                 font-weight: 600;
                 text-decoration: none;
@@ -543,7 +543,7 @@ a {
               font-weight: 500;
               color:#999;
             &.finalprice{
-              color:green;    
+              color:#ca0030;    
               font-size: 1.5rem;
               font-weight: 600;
               text-decoration: none;
@@ -912,10 +912,22 @@ a {
             font-family: Open Sans,sans-serif;
             span{
               font-size: .8rem;
+              color:#828282;
+              text-decoration:line-through;
+              text-decoration-style: solid;
+              text-decoration-color:#ca0030;
+              &.finalprice{
+                text-decoration: none;
+                color:#ca0030;
+              }
             }
           }   
           &:last-child{
             margin-right: 0px;
+          }
+          & .imgwrap{
+            max-height: 300px;
+            overflow:hidden;
           }
         }
       }

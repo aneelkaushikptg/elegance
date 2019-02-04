@@ -3,7 +3,32 @@ import { Tabs, Tab, Table, Button, ButtonGroup } from 'react-bootstrap';
 import ProductsData from "../../data/products.json";
 
 export class Dashboard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            active: false,
+        }
+    }
+
+    //handling finalprice in looping
+    onloadGetFinalPrice() {
+        ProductsData.forEach((item) => {
+            const discountedPrice = (item.price * item.discount) / 100;
+            item.finalprice = Math.round(item.price - discountedPrice);
+        })
+    }
+
+    /**** ADD PRODUCT ****/
+    selectSize() {
+        console.log(this.state.active)
+        this.setState = ({
+            active: true,
+        })
+    }
+
     render() {
+        const imageURL = "../images/products/";
+        this.onloadGetFinalPrice();
         return (
             <div className="container dash">
                 <h3>test</h3>
@@ -33,10 +58,12 @@ export class Dashboard extends React.Component {
                                         ProductsData.slice(0, 4).map((product) => {
                                             if (product.arrival === "new") {
                                                 return (
-                                                    <div key={product.id} onClick={() => this.selectProduct(product)} className="col-md-3 col-6 topselling-each">
-                                                        <img alt={product.name} src={product.coverimg} className="img-fluid" />
+                                                    <div key={product.id} className="col-md-3 col-6 topselling-each">
+                                                        <div className="imgwrap">
+                                                            <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />
+                                                        </div>
                                                         <h3>{product.name}</h3>
-                                                        <h4><span>$</span>{product.price}</h4>
+                                                        <h4><span>₹{product.price}</span> <span className="finalprice">₹{product.finalprice}</span></h4>
                                                     </div>
                                                 )
                                             }
@@ -82,7 +109,7 @@ export class Dashboard extends React.Component {
                                         </tr>
                                     </tbody>
                                 </Table>
-                                <button className="btn" type="button">Save Changes</button>
+                                <button className="btn bgbtn" type="button">Save Changes</button>
                             </div>
                         </Tab>
                         <Tab eventKey={3} title="Add Product">
@@ -100,19 +127,19 @@ export class Dashboard extends React.Component {
                                         </div>
                                         <div className="col-md-6">
                                             <ButtonGroup bsSize="small">
-                                                <Button>XS</Button>
-                                                <Button>S</Button>
-                                                <Button>L</Button>
-                                                <Button>XL</Button>
-                                                <Button>XXL</Button>
-                                                <Button>XXXL</Button>
+                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XS</Button>
+                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>S</Button>
+                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>L</Button>
+                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XL</Button>
+                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XXL</Button>
+                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XXXL</Button>
                                             </ButtonGroup>
                                         </div>
                                         <div className="col-md-6 form-group">
                                             <textarea name="txtMsg" className="form-control" placeholder="Description*"></textarea>
                                         </div>
                                         <div className="col-md-6 form-group">
-                                            <button type="submit" name="addprod" className="btn" onClick={this.addProduct}>Add Product</button>
+                                            <button type="submit" name="addprod" className="btn bgbtn" onClick={this.addProduct}>Add Product</button>
                                         </div>
                                     </div>
                                 </form>
@@ -191,7 +218,7 @@ export class Dashboard extends React.Component {
                                         </tr>
                                     </tbody>
                                 </Table>
-                                <button className="btn" type="button">Save Changes</button>
+                                <button className="btn bgbtn" type="button">Save Changes</button>
                             </div>
                         </Tab>
                     </Tabs>

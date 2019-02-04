@@ -58,8 +58,11 @@ class Header extends React.Component {
               <NavItem>
                 <NavLink href="/collections">Collections</NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink href="/wishlist">Wishlist</NavLink>
+              </NavItem> */}
+              <NavItem>
+                <NavLink href="/sale">Clearance Sale</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
