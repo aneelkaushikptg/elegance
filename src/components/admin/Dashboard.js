@@ -1,6 +1,7 @@
 import React from "react";
 import { Tabs, Tab, Table, Button, ButtonGroup } from 'react-bootstrap';
 import ProductsData from "../../data/products.json";
+import ordersData from "../admin/admindata/orders.json";
 import ImageUploader from 'react-images-upload';
 
 export class Dashboard extends React.Component {
@@ -11,6 +12,9 @@ export class Dashboard extends React.Component {
             pictures: []
         }
         this.onDrop = this.onDrop.bind(this);
+        var tempDate = new Date();
+        var date = tempDate.getFullYear() + '-' + (tempDate.getMonth() + 1) + '-' + tempDate.getDate();
+        const addedDate = "Current Date= " + date;
     }
 
     //handling finalprice in looping
@@ -36,9 +40,18 @@ export class Dashboard extends React.Component {
         });
     }
 
+    //added date
+    addedDate() {
+        var tempDate = new Date();
+        var date = tempDate.getFullYear() + '-' + (tempDate.getMonth() + 1) + '-' + tempDate.getDate();
+        this.addedDate = "Current Date= " + date;
+    }
+
+
     render() {
         const imageURL = "../images/products/";
         this.onloadGetFinalPrice();
+
         return (
             <div className="container dash">
                 <h3>test</h3>
@@ -90,33 +103,42 @@ export class Dashboard extends React.Component {
                                     <thead>
                                         <tr>
                                             <th>#</th>
+                                            <th>Image</th>
+                                            {/* <th>Date Added</th> */}
                                             <th>Product Name</th>
-                                            <th>Size Available</th>
+                                            <th>Sizes Available</th>
                                             <th>Price</th>
                                             <th>Discount</th>
+                                            <th>Sale Price</th>
                                             <th>Description</th>
+                                            <th>Fabric</th>
+                                            <th>Sale</th>
                                             <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Green Shirt</td>
-                                            <td> S,M,XL</td>
-                                            <td>$42</td>
-                                            <td>10%</td>
-                                            <td>Short Dress in patterned jersey with narrow shoulder straps that cross and tie at the back, a double-layered</td>
-                                            <td><button className="btn">X</button> <button className="btn editbtn">Edit</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Black Shirt</td>
-                                            <td>S,M,L,XL</td>
-                                            <td>$39</td>
-                                            <td>0</td>
-                                            <td>Short Dress in patterned jersey with narrow shoulder straps that cross and tie at the back, a double-layered</td>
-                                            <td><button className="btn">X</button> <button className="btn editbtn">Edit</button></td>
-                                        </tr>
+                                        {ProductsData.map((product) => {
+                                            return (
+                                                <tr key={product.id}>
+                                                    <td>{product.id}</td>
+                                                    <td><img alt={product.name} src={`${imageURL}${product.coverimg}`} className="smallimg" /></td>
+                                                    {/* <td>{this.addedDate}</td> */}
+                                                    <td>{product.name}</td>
+                                                    <td>
+                                                        {product.sizes.map(sizes => (
+                                                            <span className="sizeavb" key={sizes}>{sizes}</span>
+                                                        ))}
+                                                    </td>
+                                                    <td>{product.price}</td>
+                                                    <td>{product.discount}%</td>
+                                                    <td>{product.finalprice}</td>
+                                                    <td>{product.description}</td>
+                                                    <td>{product.fabric}</td>
+                                                    <td>{product.sale}</td>
+                                                    <td><button className="btn">X</button> <button className="btn editbtn">Edit</button></td>
+                                                </tr>
+                                            );
+                                        })}
                                     </tbody>
                                 </Table>
                                 <button className="btn bgbtn" type="button">Save Changes</button>
@@ -193,7 +215,9 @@ export class Dashboard extends React.Component {
                                         <tr>
                                             <th>#</th>
                                             <th>Date</th>
+                                            <th>Prod Image</th>
                                             <th>Product Name</th>
+                                            <th>Price</th>
                                             <th>Size</th>
                                             <th>Status</th>
                                             <th>Customer Name</th>
@@ -203,57 +227,29 @@ export class Dashboard extends React.Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>4 Dec 2018</td>
-                                            <td>Green Shirt</td>
-                                            <td>S</td>
-                                            <td>
-                                                <select>
-                                                    <option value="Working">Working</option>
-                                                    <option value="Shipped">Shipped</option>
-                                                    <option value="Delivered">Delivered</option>
-                                                </select>
-                                            </td>
-                                            <td>Andrew</td>
-                                            <td>Australia</td>
-                                            <td>812567839</td>
-                                            <td>andrewgroass@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>7 Dec 2018</td>
-                                            <td>Black Blue Shirt</td>
-                                            <td>M</td>
-                                            <td>
-                                                <select>
-                                                    <option value="Working">Working</option>
-                                                    <option value="Shipped">Shipped</option>
-                                                    <option value="Delivered">Delivered</option>
-                                                </select>
-                                            </td>
-                                            <td>Komali</td>
-                                            <td>Canada</td>
-                                            <td>8900078002</td>
-                                            <td>komalikandadai@gmail.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>2 Dec 2018</td>
-                                            <td>White Grey Shirt</td>
-                                            <td>XL</td>
-                                            <td>
-                                                <select>
-                                                    <option value="Working">Working</option>
-                                                    <option value="Shipped">Shipped</option>
-                                                    <option value="Delivered">Delivered</option>
-                                                </select>
-                                            </td>
-                                            <td>Aneel Kaushik</td>
-                                            <td>Hyderabad</td>
-                                            <td>9700078025</td>
-                                            <td>aneelkauhsikk@gmail.com</td>
-                                        </tr>
+                                        {ordersData.map((order) => {
+                                            return (
+                                                <tr key={order.id}>
+                                                    <td>{order.id}</td>
+                                                    <td>{order.date}</td>
+                                                    <td><img alt={order.name} src={`${imageURL}${order.coverimg}`} className="smallimg" /></td>
+                                                    <td>{order.name}</td>
+                                                    <td>{order.price}</td>
+                                                    <td>{order.size}</td>
+                                                    <td>
+                                                        <select>
+                                                            <option value="Working">Working</option>
+                                                            <option value="Shipped">Shipped</option>
+                                                            <option value="Delivered">Delivered</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>{order.customer}</td>
+                                                    <td>{order.location}</td>
+                                                    <td>{order.contact}</td>
+                                                    <td>{order.email}</td>
+                                                </tr>
+                                            );
+                                        })}
                                     </tbody>
                                 </Table>
                                 <button className="btn bgbtn" type="button">Save Changes</button>

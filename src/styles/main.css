@@ -737,6 +737,12 @@ a:hover {
     .wrapper .dash-tabs .prods .table tr td {
       font-size: 13px;
       font-family: Varela Round,sans-serif; }
+      .wrapper .dash-tabs .prods .table tr td .sizeavb {
+        margin-right: 5px;
+        border: 1px solid #999;
+        padding: 3px; }
+      .wrapper .dash-tabs .prods .table tr td .smallimg {
+        max-width: 60px; }
       .wrapper .dash-tabs .prods .table tr td .btn {
         color: #ca0030;
         background: none;

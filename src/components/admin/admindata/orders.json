@@ -16,12 +16,14 @@
         "category": "designer",
         "arrival": "new",
         "liked": false,
-        "sizes": [
-            "XS",
-            "L",
-            "XL",
-            "XXL"
-        ]
+        "sizes": {
+            "XS": false,
+            "S": false,
+            "M": false,
+            "L": false,
+            "XL": false,
+            "XXL": false
+        }
     },
     {
         "id": 2,
@@ -41,12 +43,14 @@
         "category": "designer",
         "arrival": "new",
         "liked": false,
-        "sizes": [
-            "XS",
-            "S",
-            "M",
-            "L"
-        ]
+        "sizes": {
+            "XS": true,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": false,
+            "XXL": false
+        }
     },
     {
         "id": 3,
@@ -63,12 +67,14 @@
         "category": "party",
         "arrival": "new",
         "liked": false,
-        "sizes": [
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ]
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
     },
     {
         "id": 4,
@@ -88,13 +94,14 @@
         "category": "casual",
         "arrival": "new",
         "liked": false,
-        "sizes": [
-            "XS",
-            "S",
-            "M",
-            "L",
-            "XL"
-        ]
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
     },
     {
         "id": 5,
@@ -113,14 +120,14 @@
         "category": "casual",
         "arrival": "new",
         "liked": false,
-        "sizes": [
-            "XS",
-            "S",
-            "M",
-            "L",
-            "XL",
-            "XXL"
-        ]
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
     },
     {
         "id": 6,
@@ -140,11 +147,13 @@
             "06-01.jpg",
             "06-02.jpg"
         ],
-        "sizes": [
-            "XS",
-            "S",
-            "XL",
-            "XXL"
-        ]
+        "sizes": {
+            "XS": false,
+            "S": true,
+            "M": true,
+            "L": true,
+            "XL": true,
+            "XXL": false
+        }
     }
 ]

@@ -961,6 +961,14 @@ a {
               td{
                 font-size: 13px;
                 font-family: Varela Round,sans-serif;
+                & .sizeavb{
+                  margin-right:5px;
+                  border:1px solid #999;
+                  padding: 3px;
+                }
+                & .smallimg{
+                  max-width: 60px;
+                }
                 & .btn{
                   color: #ca0030;
                   background: none;

@@ -4,7 +4,6 @@ import ProductsData from "../data/products.json";
 import Shared from "../services/shared";
 
 class Home extends React.Component {
-
     selectProduct(product) {
         Shared.selectProduct = product;
     }
