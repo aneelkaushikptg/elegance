@@ -58,6 +58,7 @@ class Home extends React.Component {
                                             return (
                                                 <li key={product.id} onClick={() => this.selectProduct(product)} className="col-md-3 col-6">
                                                     <div className="imgwrap">
+                                                    {product.discount > 0 && (<div className="discountag">{product.discount}%</div>)}
                                                         <Link to={`/product/${product.id}`}>
                                                             <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />
                                                         </Link>

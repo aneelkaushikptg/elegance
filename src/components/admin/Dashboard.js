@@ -1,13 +1,16 @@
 import React from "react";
 import { Tabs, Tab, Table, Button, ButtonGroup } from 'react-bootstrap';
 import ProductsData from "../../data/products.json";
+import ImageUploader from 'react-images-upload';
 
 export class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             active: false,
+            pictures: []
         }
+        this.onDrop = this.onDrop.bind(this);
     }
 
     //handling finalprice in looping
@@ -20,10 +23,17 @@ export class Dashboard extends React.Component {
 
     /**** ADD PRODUCT ****/
     selectSize() {
-        console.log(this.state.active)
         this.setState = ({
             active: true,
         })
+        console.log(this.state.active)
+    }
+
+    //upload images
+    onDrop(picture) {
+        this.setState({
+            pictures: this.state.pictures.concat(picture),
+        });
     }
 
     render() {
@@ -73,7 +83,7 @@ export class Dashboard extends React.Component {
                         </Tab>
                         <Tab eventKey={2} title="Products">
                             <div className="dash-tabs-inner">
-                                <h4>List of Products</h4>
+                                <h4>List of All Products</h4>
                             </div>
                             <div className="prods">
                                 <Table striped bordered condensed hover responsive>
@@ -114,19 +124,17 @@ export class Dashboard extends React.Component {
                         </Tab>
                         <Tab eventKey={3} title="Add Product">
                             <div className="dash-tabs-inner">
-                                <h4>Add a Product</h4>
+                                <h4>Add a New Product</h4>
                             </div>
                             <div className="addprod">
                                 <form method="post">
                                     <div className="row">
                                         <div className="col-md-6 form-group">
                                             <input type="text" name="prodName" className="form-control" placeholder="Product Name *" />
-                                        </div>
-                                        <div className="col-md-6 form-group">
                                             <input type="text" name="prodprice" className="form-control" placeholder="Product Price*" />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <ButtonGroup bsSize="small">
+                                            <input type="text" name="discount" className="form-control" placeholder="Discount*" />
+                                            <input type="text" name="fabric" className="form-control" placeholder="Fabric*" />
+                                            <ButtonGroup bsSize="small m-b-20">
                                                 <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XS</Button>
                                                 <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>S</Button>
                                                 <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>L</Button>
@@ -134,9 +142,39 @@ export class Dashboard extends React.Component {
                                                 <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XXL</Button>
                                                 <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XXXL</Button>
                                             </ButtonGroup>
+                                            <label>Category</label>
+                                            <select className="form-control">
+                                                <option vlaue="casual">Casual</option>
+                                                <option vlaue="designer">Designer</option>
+                                                <option vlaue="party">Party</option>
+                                            </select>
+                                            <label>Gender</label>
+                                            <select className="form-control">
+                                                <option vlaue="women">Women</option>
+                                                <option vlaue="kids">Kids</option>
+                                            </select>
+                                            <label>For Sale</label>
+                                            <select className="form-control">
+                                                <option vlaue="true">Yes</option>
+                                                <option vlaue="false">No</option>
+                                            </select>
+                                            <label>Arrival</label>
+                                            <select className="form-control">
+                                                <option vlaue="old">Old</option>
+                                                <option vlaue="new">New</option>
+                                            </select>
                                         </div>
                                         <div className="col-md-6 form-group">
                                             <textarea name="txtMsg" className="form-control" placeholder="Description*"></textarea>
+                                            <ImageUploader
+                                                withIcon={true}
+                                                buttonText='Choose images'
+                                                onChange={this.onDrop}
+                                                imgExtension={['.jpg', '.gif', '.png']}
+                                                maxFileSize={5242880}
+                                                singleImage={false}
+                                                withPreview={true}
+                                            />
                                         </div>
                                         <div className="col-md-6 form-group">
                                             <button type="submit" name="addprod" className="btn bgbtn" onClick={this.addProduct}>Add Product</button>

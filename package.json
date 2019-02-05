@@ -12,6 +12,7 @@
     "react-dom": "^16.7.0",
     "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.0.0",
+    "react-images-upload": "^1.2.6",
     "react-instafeed": "^1.0.0",
     "react-message-router": "^1.1.2",
     "react-rangeslider": "^2.2.0",

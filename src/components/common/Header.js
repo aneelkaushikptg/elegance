@@ -71,7 +71,7 @@ class Header extends React.Component {
                 <NavLink href="/contact">Contact</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/dashboard">Admin</NavLink>
+                <NavLink href="/admin">Admin</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
