@@ -731,29 +731,31 @@ a:hover {
       .wrapper .dash-tabs .topselling-each .imgwrap {
         max-height: 300px;
         overflow: hidden; }
-    .wrapper .dash-tabs .prods .table tr th {
-      text-transform: uppercase;
-      font-size: 12px; }
-    .wrapper .dash-tabs .prods .table tr td {
-      font-size: 13px;
-      font-family: Varela Round,sans-serif; }
-      .wrapper .dash-tabs .prods .table tr td .sizeavb {
-        margin-right: 5px;
-        border: 1px solid #999;
-        padding: 3px; }
-      .wrapper .dash-tabs .prods .table tr td .smallimg {
-        max-width: 60px; }
-      .wrapper .dash-tabs .prods .table tr td .btn {
-        color: #ca0030;
-        background: none;
-        font-size: 18px;
-        padding: 0 3px;
-        text-align: center;
-        border: none;
-        display: inline-block; }
-        .wrapper .dash-tabs .prods .table tr td .btn.editbtn {
-          color: #0073c6;
-          font-size: 12px; }
+    .wrapper .dash-tabs .prods .tablewrap {
+      overflow: auto; }
+      .wrapper .dash-tabs .prods .tablewrap .table tr th {
+        text-transform: uppercase;
+        font-size: 12px; }
+      .wrapper .dash-tabs .prods .tablewrap .table tr td {
+        font-size: 13px;
+        font-family: Varela Round,sans-serif; }
+        .wrapper .dash-tabs .prods .tablewrap .table tr td .sizeavb {
+          margin-right: 5px;
+          border: 1px solid #999;
+          padding: 3px; }
+        .wrapper .dash-tabs .prods .tablewrap .table tr td .smallimg {
+          max-width: 60px; }
+        .wrapper .dash-tabs .prods .tablewrap .table tr td .btn {
+          color: #ca0030;
+          background: none;
+          font-size: 18px;
+          padding: 0 3px;
+          text-align: center;
+          border: none;
+          display: inline-block; }
+          .wrapper .dash-tabs .prods .tablewrap .table tr td .btn.editbtn {
+            color: #0073c6;
+            font-size: 12px; }
     .wrapper .dash-tabs .addprod form label {
       width: 100%; }
     .wrapper .dash-tabs .addprod form .btn-default {

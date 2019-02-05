@@ -12,9 +12,9 @@ export class Dashboard extends React.Component {
             pictures: []
         }
         this.onDrop = this.onDrop.bind(this);
-        var tempDate = new Date();
-        var date = tempDate.getFullYear() + '-' + (tempDate.getMonth() + 1) + '-' + tempDate.getDate();
-        const addedDate = "Current Date= " + date;
+        // var tempDate = new Date();
+        // var date = tempDate.getFullYear() + '-' + (tempDate.getMonth() + 1) + '-' + tempDate.getDate();
+        // const addedDate = "Current Date= " + date;
     }
 
     //handling finalprice in looping
@@ -54,7 +54,7 @@ export class Dashboard extends React.Component {
 
         return (
             <div className="container dash">
-                <h3>test</h3>
+                <h3>Admin Panel</h3>
                 <div className="dash-counts">
                     <div className="dash-counts-each">
                         <h3>Orders</h3>
@@ -67,6 +67,10 @@ export class Dashboard extends React.Component {
                     <div className="dash-counts-each">
                         <h3>Pending Orders</h3>
                         <h4>32</h4>
+                    </div>
+                    <div className="dash-counts-each">
+                        <h3>Products</h3>
+                        <h4>15</h4>
                     </div>
                 </div>
                 <div className="dash-tabs">
@@ -96,10 +100,10 @@ export class Dashboard extends React.Component {
                         </Tab>
                         <Tab eventKey={2} title="Products">
                             <div className="dash-tabs-inner">
-                                <h4>List of All Products</h4>
+                                <h4>List of All Products ({ProductsData.length})</h4>
                             </div>
                             <div className="prods">
-                                <Table striped bordered condensed hover responsive>
+                                <div className="tablewrap"> <Table striped bordered condensed hover responsive>
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -141,6 +145,7 @@ export class Dashboard extends React.Component {
                                         })}
                                     </tbody>
                                 </Table>
+                                </div>
                                 <button className="btn bgbtn" type="button">Save Changes</button>
                             </div>
                         </Tab>
@@ -207,51 +212,53 @@ export class Dashboard extends React.Component {
                         </Tab>
                         <Tab eventKey={4} title="Orders">
                             <div className="dash-tabs-inner">
-                                <h4>List of Orders</h4>
+                                <h4>List of Orders ({ordersData.length})</h4>
                             </div>
                             <div className="prods">
-                                <Table striped bordered condensed hover responsive>
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Date</th>
-                                            <th>Prod Image</th>
-                                            <th>Product Name</th>
-                                            <th>Price</th>
-                                            <th>Size</th>
-                                            <th>Status</th>
-                                            <th>Customer Name</th>
-                                            <th>Location</th>
-                                            <th>Mobile</th>
-                                            <th>Email</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {ordersData.map((order) => {
-                                            return (
-                                                <tr key={order.id}>
-                                                    <td>{order.id}</td>
-                                                    <td>{order.date}</td>
-                                                    <td><img alt={order.name} src={`${imageURL}${order.coverimg}`} className="smallimg" /></td>
-                                                    <td>{order.name}</td>
-                                                    <td>{order.price}</td>
-                                                    <td>{order.size}</td>
-                                                    <td>
-                                                        <select>
-                                                            <option value="Working">Working</option>
-                                                            <option value="Shipped">Shipped</option>
-                                                            <option value="Delivered">Delivered</option>
-                                                        </select>
-                                                    </td>
-                                                    <td>{order.customer}</td>
-                                                    <td>{order.location}</td>
-                                                    <td>{order.contact}</td>
-                                                    <td>{order.email}</td>
-                                                </tr>
-                                            );
-                                        })}
-                                    </tbody>
-                                </Table>
+                                <div className="tablewrap">
+                                    <Table striped bordered condensed hover responsive>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Date</th>
+                                                <th>Prod Image</th>
+                                                <th>Product Name</th>
+                                                <th>Price</th>
+                                                <th>Size</th>
+                                                <th>Status</th>
+                                                <th>Customer Name</th>
+                                                <th>Location</th>
+                                                <th>Mobile</th>
+                                                <th>Email</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {ordersData.map((order) => {
+                                                return (
+                                                    <tr key={order.id}>
+                                                        <td>{order.id}</td>
+                                                        <td>{order.date}</td>
+                                                        <td><img alt={order.name} src={`${imageURL}${order.coverimg}`} className="smallimg" /></td>
+                                                        <td>{order.name}</td>
+                                                        <td>{order.price}</td>
+                                                        <td>{order.size}</td>
+                                                        <td>
+                                                            <select>
+                                                                <option value="Working">Working</option>
+                                                                <option value="Shipped">Shipped</option>
+                                                                <option value="Delivered">Delivered</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>{order.customer}</td>
+                                                        <td>{order.location}</td>
+                                                        <td>{order.contact}</td>
+                                                        <td>{order.email}</td>
+                                                    </tr>
+                                                );
+                                            })}
+                                        </tbody>
+                                    </Table>
+                                </div>
                                 <button className="btn bgbtn" type="button">Save Changes</button>
                             </div>
                         </Tab>

@@ -37,7 +37,7 @@ class Products extends React.Component {
         const sortbyGender = this.props.sortByGender;
 
         // filtering by individual Category
-        if (filterby === "All" && rangefilter == 60 && sortbyGender === "All") {
+        if (filterby === "All" && rangefilter === 60 && sortbyGender === "All") {
             finalData = ProductsData;
             //sorting data for Category only
         } else if (filterby !== "All" && rangefilter >= rangefilter && sortbyGender === "All") {
@@ -58,7 +58,7 @@ class Products extends React.Component {
             })
         }
         //sorting data for Gender only
-        else if (filterby === "All" && rangefilter === 60 && sortbyGender != "All") {
+        else if (filterby === "All" && rangefilter === 60 && sortbyGender !== "All") {
             finalData = [];
             ProductsData.forEach(e => {
                 if (e.gender === sortbyGender) {

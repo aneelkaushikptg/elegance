@@ -4,7 +4,25 @@
         & .bgbtn{
             margin-bottom:10px;
         }
-
+        & .dash{
+            &-counts{
+                margin-bottom: 10px;
+               &-each{
+                margin: 0 0 10px 0 !important;
+                width: 50% !important;
+               }
+            }
+            &-tabs{
+                ul{
+                    li{
+                        padding: 5px 13px;
+                        a{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
         & .inner{
             &-head{
                 h1 {
@@ -190,12 +208,12 @@
                 width: 100%;                
               }
             }
-          }
+        }
         .login{
             &-inner{
                 padding: 30px 25px;
                 width: 300px;
             }
-        }
+        }        
      }
 }

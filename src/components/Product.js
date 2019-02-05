@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Shared from "../services/shared";
-import Like from "../components/common/Like";
+// import Like from "../components/common/Like";
 import Ordermodal from "../components/Ordermodal";
 import { WhatsappMessage } from 'react-message-router';
 import ProductsData from "../data/products.json";
@@ -89,7 +89,7 @@ class Product extends React.Component {
                                         borderRadius: '25px', float: 'left', fontSize: '1rem', fontWeight: '600'
                                     }}
                                 />
-                                <Like liked={currentproduct.liked} onClick={() => this.handleLike(currentproduct)} />
+                                {/* <Like liked={currentproduct.liked} onClick={() => this.handleLike(currentproduct)} /> */}
                             </div>
                         </div>
                     </div>
@@ -149,7 +149,7 @@ class Product extends React.Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td scope="row">7 - 10 Business Days</td>
+                                                <td>7 - 10 Business Days</td>
                                                 <td>10 - 15 Business Days</td>
                                             </tr>
                                         </tbody>
