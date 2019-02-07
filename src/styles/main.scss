@@ -860,9 +860,9 @@ a {
       &-each{
         background: #fff;
         margin: 0 25px 0 0;
-        min-width: 31.7%;
+        min-width: calc(24.7% - 1rem);
         padding: 1rem;
-          &:last-child{
+        &:last-child{
           margin-right: 0px;
         }
         h3{

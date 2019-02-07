@@ -100,8 +100,6 @@ class ModalComponent extends React.Component {
                                         <button className="btn bgbtn" type="submit">Place Order</button>
                                         <Link className="btn borderbtn" to="/collections">Continue Shopping</Link>
                                     </div>
-
-
                                 </form>
                             </div>
 
@@ -111,7 +109,6 @@ class ModalComponent extends React.Component {
                         </form>
                     </div>
                 </div>
-
             </div>
         );
     }

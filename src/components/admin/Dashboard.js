@@ -1,20 +1,73 @@
 import React from "react";
 import { Tabs, Tab, Table, Button, ButtonGroup } from 'react-bootstrap';
+
 import ProductsData from "../../data/products.json";
 import ordersData from "../admin/admindata/orders.json";
 import ImageUploader from 'react-images-upload';
+import EditProduct from '../admin/Editproduct';
 
 export class Dashboard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            showPopup: false,
             active: false,
-            pictures: []
+            pictures: [],
+            newproduct: {
+                id: null,
+                name: '',
+                price: '',
+                discount: '',
+                fabric: '',
+                description: '',
+                category: '',
+                gender: '',
+                sale: '',
+                arrival: '',
+                range: '',
+                arrival: "new",
+                liked: false,
+                coverimg: "06.jpg",
+                images: [
+                    "06-01.jpg"
+                ],
+                sizes: [
+
+                ]
+            },
+            productsDataTemp: ProductsData
         }
+        this.handleNewProduct = this.handleNewProduct.bind(this);
         this.onDrop = this.onDrop.bind(this);
-        // var tempDate = new Date();
-        // var date = tempDate.getFullYear() + '-' + (tempDate.getMonth() + 1) + '-' + tempDate.getDate();
-        // const addedDate = "Current Date= " + date;
+    }
+
+    // edit product popup 
+    togglePopup() {
+        this.setState({
+            showPopup: !this.state.showPopup
+        });
+    }
+
+    // new product data
+    handleNewProduct(e) {
+        const newproduct = this.state.newproduct;
+        newproduct[e.currentTarget.name] = e.currentTarget.value;
+        this.setState({
+            newproduct: newproduct
+        });
+        console.log(newproduct);
+    }
+
+    //adding new product
+    addProduct = (event) => {
+        let tempData = this.state.productsDataTemp;
+        tempData.push(this.state.newproduct);
+        this.setState({
+            productsDataTemp: tempData
+        })
+
+
+
     }
 
     //handling finalprice in looping
@@ -26,11 +79,12 @@ export class Dashboard extends React.Component {
     }
 
     /**** ADD PRODUCT ****/
-    selectSize() {
-        this.setState = ({
-            active: true,
+    selectSize(e) {
+        let tempSizeArray = Object.assign({}, this.state);
+        tempSizeArray.newproduct.sizes.push(e.currentTarget.value);
+        this.setState({
+            tempSizeArray
         })
-        console.log(this.state.active)
     }
 
     //upload images
@@ -40,20 +94,16 @@ export class Dashboard extends React.Component {
         });
     }
 
-    //added date
-    addedDate() {
-        var tempDate = new Date();
-        var date = tempDate.getFullYear() + '-' + (tempDate.getMonth() + 1) + '-' + tempDate.getDate();
-        this.addedDate = "Current Date= " + date;
-    }
-
-
     render() {
         const imageURL = "../images/products/";
         this.onloadGetFinalPrice();
-
         return (
             <div className="container dash">
+                {
+                    this.state.showPopup ? (
+                        <EditProduct text="Edit Product Details" closePopup={this.togglePopup.bind(this)} />
+                    ) : null
+                }
                 <h3>Admin Panel</h3>
                 <div className="dash-counts">
                     <div className="dash-counts-each">
@@ -108,9 +158,8 @@ export class Dashboard extends React.Component {
                                         <tr>
                                             <th>#</th>
                                             <th>Image</th>
-                                            {/* <th>Date Added</th> */}
                                             <th>Product Name</th>
-                                            <th>Sizes Available</th>
+                                            {/* <th>Sizes Available</th> */}
                                             <th>Price</th>
                                             <th>Discount</th>
                                             <th>Sale Price</th>
@@ -121,25 +170,24 @@ export class Dashboard extends React.Component {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {ProductsData.map((product) => {
+                                        {this.state.productsDataTemp.map((product, index) => {
                                             return (
                                                 <tr key={product.id}>
-                                                    <td>{product.id}</td>
+                                                    <td>{index + 1}</td>
                                                     <td><img alt={product.name} src={`${imageURL}${product.coverimg}`} className="smallimg" /></td>
-                                                    {/* <td>{this.addedDate}</td> */}
                                                     <td>{product.name}</td>
-                                                    <td>
+                                                    {/* <td>
                                                         {product.sizes.map(sizes => (
                                                             <span className="sizeavb" key={sizes}>{sizes}</span>
                                                         ))}
-                                                    </td>
+                                                    </td> */}
                                                     <td>{product.price}</td>
                                                     <td>{product.discount}%</td>
                                                     <td>{product.finalprice}</td>
                                                     <td>{product.description}</td>
                                                     <td>{product.fabric}</td>
                                                     <td>{product.sale}</td>
-                                                    <td><button className="btn">X</button> <button className="btn editbtn">Edit</button></td>
+                                                    <td><button className="btn">X</button> <button className="btn editbtn" onClick={this.togglePopup.bind(this)}>Edit</button></td>
                                                 </tr>
                                             );
                                         })}
@@ -154,45 +202,60 @@ export class Dashboard extends React.Component {
                                 <h4>Add a New Product</h4>
                             </div>
                             <div className="addprod">
-                                <form method="post">
+                                <div>
                                     <div className="row">
                                         <div className="col-md-6 form-group">
-                                            <input type="text" name="prodName" className="form-control" placeholder="Product Name *" />
-                                            <input type="text" name="prodprice" className="form-control" placeholder="Product Price*" />
-                                            <input type="text" name="discount" className="form-control" placeholder="Discount*" />
-                                            <input type="text" name="fabric" className="form-control" placeholder="Fabric*" />
-                                            <ButtonGroup bsSize="small m-b-20">
-                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XS</Button>
-                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>S</Button>
-                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>L</Button>
-                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XL</Button>
-                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XXL</Button>
-                                                <Button onClick={() => this.selectSize()} className={this.state.active ? 'active' : null}>XXXL</Button>
-                                            </ButtonGroup>
+                                            <input type="text" name="name" className="form-control" placeholder="Product Name *" value={this.state.newproduct.name}
+                                                onChange={this.handleNewProduct} />
+                                            <input type="text" name="price" className="form-control" placeholder="Product Price*" value={this.state.newproduct.price}
+                                                onChange={this.handleNewProduct} />
+                                            <input type="text" name="range" className="form-control" placeholder="Price Range*" value={this.state.newproduct.range}
+                                                onChange={this.handleNewProduct} />
+                                            <input type="text" name="discount" className="form-control" placeholder="Discount*" value={this.state.newproduct.discount}
+                                                onChange={this.handleNewProduct} />
+                                            <input type="text" name="fabric" className="form-control" placeholder="Fabric*" value={this.state.newproduct.fabric}
+                                                onChange={this.handleNewProduct} />
+
+                                            <div className="small m-b-20">
+                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XS">XS</Button>
+                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="S">S</Button>
+                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="L">L</Button>
+                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XL">XL</Button>
+                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XXL">XXL</Button>
+                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XXXL">XXXL</Button>
+                                            </div>
+
                                             <label>Category</label>
-                                            <select className="form-control">
-                                                <option vlaue="casual">Casual</option>
-                                                <option vlaue="designer">Designer</option>
-                                                <option vlaue="party">Party</option>
+                                            <select name="category" className="form-control" onChange={this.handleNewProduct} value={this.state.newproduct.category}>
+                                                {/* {this.state.newproduct.category.map(cat => (
+                                                    <option key={cat.value} value={cat.value}>
+                                                        {cat.name}
+                                                    </option>
+                                                ))} */}
+                                                <option value="designer">Designer Wear</option>
+                                                <option value="party">Party Wear</option>
+                                                <option value="casual">Casual Wear</option>
                                             </select>
+
                                             <label>Gender</label>
-                                            <select className="form-control">
-                                                <option vlaue="women">Women</option>
-                                                <option vlaue="kids">Kids</option>
+                                            <select name="gender" className="form-control" onChange={this.handleNewProduct} value={this.state.newproduct.gender}>
+                                                <option value="women">Women</option>
+                                                <option value="kids">Kids</option>
                                             </select>
                                             <label>For Sale</label>
-                                            <select className="form-control">
-                                                <option vlaue="true">Yes</option>
-                                                <option vlaue="false">No</option>
+                                            <select name="sale" className="form-control" onChange={this.handleNewProduct} value={this.state.newproduct.sale}>
+                                                <option value="true">Yes</option>
+                                                <option value="false">No</option>
                                             </select>
                                             <label>Arrival</label>
-                                            <select className="form-control">
-                                                <option vlaue="old">Old</option>
-                                                <option vlaue="new">New</option>
+                                            <select name="arrival" className="form-control" onChange={this.handleNewProduct} value={this.state.newproduct.arrival}>
+                                                <option value="old">Old</option>
+                                                <option value="new">New</option>
                                             </select>
                                         </div>
                                         <div className="col-md-6 form-group">
-                                            <textarea name="txtMsg" className="form-control" placeholder="Description*"></textarea>
+                                            <textarea name="description" className="form-control" placeholder="Description*" onChange={this.handleNewProduct} value={this.state.newproduct.description}
+                                            ></textarea>
                                             <ImageUploader
                                                 withIcon={true}
                                                 buttonText='Choose images'
@@ -204,10 +267,10 @@ export class Dashboard extends React.Component {
                                             />
                                         </div>
                                         <div className="col-md-6 form-group">
-                                            <button type="submit" name="addprod" className="btn bgbtn" onClick={this.addProduct}>Add Product</button>
+                                            <button type="submit" name="addprod" className="btn bgbtn" onClick={this.addProduct.bind(this.state.newproduct)}> Add Product</button>
                                         </div>
                                     </div>
-                                </form>
+                                </div>
                             </div>
                         </Tab>
                         <Tab eventKey={4} title="Orders">
@@ -264,7 +327,7 @@ export class Dashboard extends React.Component {
                         </Tab>
                     </Tabs>
                 </div>
-            </div>
+            </div >
         );
     }
 }

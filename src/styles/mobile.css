@@ -10,6 +10,9 @@
     padding: 5px 13px; }
     .wrapper .dash-tabs ul li a {
       font-size: 11px; }
+  .wrapper .dash .prods .tablewrap {
+    overflow-x: auto;
+    width: 320px; }
   .wrapper .inner-head h1 {
     font-size: 1.5rem; }
   .wrapper .inner-head p {

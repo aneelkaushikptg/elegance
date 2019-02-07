@@ -24,6 +24,7 @@ class Products extends React.Component {
 
     // Like for each product
     handleLike(product) {
+        
         let products = ProductsData;
         const index = products.indexOf(product);
         products[index].liked = !products[index].liked;

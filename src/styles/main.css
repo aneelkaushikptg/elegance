@@ -663,7 +663,7 @@ a:hover {
       .wrapper .dash-counts-each {
         background: #fff;
         margin: 0 25px 0 0;
-        min-width: 31.7%;
+        min-width: calc(24.7% - 1rem);
         padding: 1rem; }
         .wrapper .dash-counts-each:last-child {
           margin-right: 0px; }
