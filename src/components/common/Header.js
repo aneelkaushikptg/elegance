@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GoogleLogin from 'react-google-login';
+import { GoogleLogout } from 'react-google-login';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
 const responseGoogle = (response) => {
@@ -42,6 +43,11 @@ class Header extends React.Component {
                   onFailure={responseGoogle}
                 // clientsecret={Bj0SwopTtA3fpoxgaEl_d65M}
                 />
+                <GoogleLogout
+                  buttonText="Logout"
+                  onLogoutSuccess={logout}
+                >
+                </GoogleLogout>
               </div>
             </div>
           </div>
