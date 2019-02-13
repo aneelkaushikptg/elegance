@@ -24,12 +24,10 @@ class Products extends React.Component {
 
     // Like for each product
     handleLike(product) {
-        
         let products = ProductsData;
         const index = products.indexOf(product);
         products[index].liked = !products[index].liked;
         this.setState({ products });
-        // Shared.likeProduct = product;
     }
 
     onloadfun() {
@@ -84,6 +82,10 @@ class Products extends React.Component {
                     return (
                         <div className="collections-all-eachwrap-each" key={product.id}>
                             <div className="col-img" onClick={() => this.selectProduct(product)}>
+                                {product.qty < 1 && (<div className="sold">
+                                    <p>Soldout</p>
+                                </div>)}
+
                                 {product.discount > 0 && (<div className="discountag">{product.discount}%</div>)}
                                 <Link to={`/product/${product.id}`}>
                                     <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />

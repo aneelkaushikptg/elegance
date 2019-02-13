@@ -385,6 +385,20 @@ a:hover {
             font-family: Open Sans,sans-serif;
             text-align: center;
             line-height: 32px; }
+          .wrapper .collections-all-eachwrap-each .col-img .sold {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.7);
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .wrapper .collections-all-eachwrap-each .col-img .sold p {
+              font-weight: 600;
+              display: inline-block;
+              text-transform: uppercase;
+              font-size: 12px; }
         .wrapper .collections-all-eachwrap-each .details {
           padding: 10px;
           text-align: center; }
@@ -498,6 +512,11 @@ a:hover {
         margin: 20px 0;
         display: flex;
         flex-flow: row wrap; }
+        .wrapper .product-one-actions .soldproduct {
+          flex-flow: column wrap;
+          display: flex; }
+          .wrapper .product-one-actions .soldproduct p {
+            margin-bottom: 20px; }
         .wrapper .product-one-actions button.like {
           position: relative;
           margin-left: 15px;
@@ -756,20 +775,22 @@ a:hover {
           .wrapper .dash-tabs .prods .tablewrap .table tr td .btn.editbtn {
             color: #0073c6;
             font-size: 12px; }
-    .wrapper .dash-tabs .addprod form label {
+    .wrapper .dash-tabs .addprod label {
       width: 100%; }
-    .wrapper .dash-tabs .addprod form .btn-default {
+    .wrapper .dash-tabs .addprod .btn {
       border: 1px solid #999;
       color: #666;
-      padding: 10px; }
-      .wrapper .dash-tabs .addprod form .btn-default.active {
+      padding: 10px;
+      margin-right: 5px;
+      background: none; }
+      .wrapper .dash-tabs .addprod .btn.active {
         background: #ca0030;
         color: #fff; }
-    .wrapper .dash-tabs .addprod form .form-control {
+    .wrapper .dash-tabs .addprod .form-control {
       font-size: 12px;
       color: #000;
       margin-bottom: 10px; }
-    .wrapper .dash-tabs .addprod form textarea {
+    .wrapper .dash-tabs .addprod textarea {
       height: 150px;
       resize: none; }
   .wrapper .footer {

@@ -10,6 +10,7 @@
         "fabric": "Raw Silk",
         "coverimg": "01.jpg",
         "sale": true,
+        "qty": 5,
         "images": [
             "01-01.jpg"
         ],
@@ -34,6 +35,7 @@
         "fabric": "Heavy Satin",
         "coverimg": "02.jpg",
         "sale": false,
+        "qty": 0,
         "images": [
             "02-01.jpg",
             "02-02.jpg"
@@ -59,6 +61,7 @@
         "fabric": "Habutai Silk",
         "coverimg": "03.jpg",
         "sale": true,
+        "qty": 0,
         "images": [],
         "category": "party",
         "arrival": "new",
@@ -81,6 +84,7 @@
         "fabric": "Silk Crepe Georgette",
         "coverimg": "04.jpg",
         "sale": true,
+        "qty": 1,
         "images": [
             "04-01.jpg",
             "04-02.jpg"
@@ -107,6 +111,7 @@
         "fabric": "Organza + Silk",
         "coverimg": "05.jpg",
         "sale": false,
+        "qty": 2,
         "images": [
             "05-01.jpg"
         ],
@@ -136,6 +141,7 @@
         "fabric": "-",
         "coverimg": "06.jpg",
         "sale": false,
+        "qty": 5,
         "images": [
             "06-01.jpg",
             "06-02.jpg"

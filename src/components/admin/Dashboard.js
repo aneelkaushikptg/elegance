@@ -28,12 +28,8 @@ export class Dashboard extends React.Component {
                 arrival: "new",
                 liked: false,
                 coverimg: "06.jpg",
-                images: [
-                    "06-01.jpg"
-                ],
-                sizes: [
-
-                ]
+                images: ["06-01.jpg"],
+                sizes: []
             },
             productsDataTemp: ProductsData
         }
@@ -65,9 +61,6 @@ export class Dashboard extends React.Component {
         this.setState({
             productsDataTemp: tempData
         })
-
-
-
     }
 
     //handling finalprice in looping
@@ -83,7 +76,8 @@ export class Dashboard extends React.Component {
         let tempSizeArray = Object.assign({}, this.state);
         tempSizeArray.newproduct.sizes.push(e.currentTarget.value);
         this.setState({
-            tempSizeArray
+            tempSizeArray,
+            active: true
         })
     }
 
@@ -217,12 +211,12 @@ export class Dashboard extends React.Component {
                                                 onChange={this.handleNewProduct} />
 
                                             <div className="small m-b-20">
-                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XS">XS</Button>
-                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="S">S</Button>
-                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="L">L</Button>
-                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XL">XL</Button>
-                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XXL">XXL</Button>
-                                                <Button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : null} value="XXXL">XXXL</Button>
+                                                <button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : 'btn'} value="XS">XS</button>
+                                                <button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : 'btn'} value="S">S</button>
+                                                <button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : 'btn'} value="L">L</button>
+                                                <button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : 'btn'} value="XL">XL</button>
+                                                <button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : 'btn'} value="XXL">XXL</button>
+                                                <button onClick={this.selectSize.bind(this)} className={this.state.active ? 'active' : 'btn'} value="XXXL">XXXL</button>
                                             </div>
 
                                             <label>Category</label>

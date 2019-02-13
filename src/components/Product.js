@@ -77,18 +77,40 @@ class Product extends React.Component {
                                 {/* {currentproduct.sizes.length === 0 && <p>Out of Stock Please order this to grab one</p>} */}
                             </ul>
                             <div className="product-one-actions">
-                                <button className="btn bgbtn" onClick={this.togglePopup.bind(this)}>Order This</button>
-                                <WhatsappMessage
-                                    label="Whatsapp us!" // Required
-                                    number='+919700078025'
-                                    textBody={`Hello! Want this ${currentproduct.name}`}
-                                    // textBody=<img src={`${imageURL} ${currentproduct.coverimg}`} />
-                                    style={{
-                                        color: '#fff', background: '#2CA25F', fontweight: '500', fontfamily: 'Crete Round',
-                                        padding: '8px 25px', textalign: 'center', marginRight: '20px', border: 'none',
-                                        borderRadius: '25px', float: 'left', fontSize: '1rem', fontWeight: '600'
-                                    }}
-                                />
+                                {currentproduct.qty > 0 && (
+                                    <React.Fragment>
+                                        <button className="btn bgbtn" onClick={this.togglePopup.bind(this)}>Order This</button>
+                                        <WhatsappMessage
+                                            label="Whatsapp us!" // Required
+                                            number='+919700078025'
+                                            textBody={`Hello! Want this ${currentproduct.name}`}
+                                            // textBody=<img src={`${imageURL} ${currentproduct.coverimg}`} />
+                                            style={{
+                                                color: '#fff', background: '#2CA25F', fontweight: '500', fontfamily: 'Crete Round',
+                                                padding: '8px 25px', textalign: 'center', marginRight: '20px', border: 'none',
+                                                borderRadius: '25px', float: 'left', fontSize: '1rem', fontWeight: '600'
+                                            }}
+                                        />
+                                    </React.Fragment>
+                                )}
+
+                                {currentproduct.qty < 1 && (
+                                    <div className="soldproduct">
+                                        <p>This Product is Sold Out</p>
+                                        <WhatsappMessage
+                                            label="Whatsapp your Request!"
+                                            number='+919700078025'
+                                            textBody={`Hello! would love to grab this ${currentproduct.name}`}
+                                            style={{
+                                                color: '#fff', background: '#2CA25F', fontweight: '500', fontfamily: 'Crete Round',
+                                                padding: '8px 25px', textalign: 'center', marginRight: '20px', border: 'none',
+                                                borderRadius: '25px', float: 'left', fontSize: '1rem', fontWeight: '600'
+                                            }}
+                                        />
+                                    </div>)}
+
+
+
                                 {/* <Like liked={currentproduct.liked} onClick={() => this.handleLike(currentproduct)} /> */}
                             </div>
                         </div>

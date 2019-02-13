@@ -53,11 +53,12 @@ class Home extends React.Component {
                             <ul>
                                 {
                                     ProductsData.slice(0, 4).map((product) => {
+                                        // if (product.arrival === "new" && product.qty > 0) {
                                         if (product.arrival === "new") {
                                             return (
                                                 <li key={product.id} onClick={() => this.selectProduct(product)} className="col-md-3 col-6">
                                                     <div className="imgwrap">
-                                                    {product.discount > 0 && (<div className="discountag">{product.discount}%</div>)}
+                                                        {product.discount > 0 && (<div className="discountag">{product.discount}%</div>)}
                                                         <Link to={`/product/${product.id}`}>
                                                             <img alt={product.name} src={`${imageURL}${product.coverimg}`} className="img-fluid" />
                                                         </Link>
