@@ -1,18 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import FacebookLogin from 'react-facebook-login';
-// import GoogleLogin from 'react-google-login';
+import GoogleLogin from 'react-google-login';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
+const responseGoogle = (response) => {
+  console.log(response);
+}
+
+
 class Header extends React.Component {
-  // const responseFacebook = (response) => {
-  //   console.log(response);
-  // }
-
-  // const responseGoogle = (response) => {
-  //   console.log(response);
-  // }
-
   constructor(props) {
     super(props);
     this.toggle = this.toggle.bind(this);
@@ -40,9 +36,14 @@ class Header extends React.Component {
               </div>
               <div className="col-4 d-flex justify-content-end align-items-center">
                 {/* <Link to="/login" className="btn btn-primary">Login</Link> */}
-                {/* <FacebookLogin appId="" fields="name,email,picture" callback={responseFacebook} /> 
-              <GoogleLogin clientId="173421738183-6hffoeklipiqfjlq8no6hsqclmv73dhq.apps.googleusercontent.com" buttonText="Login with G+" onSuccess={responseGoogle}
-                onFailure={responseGoogle} />*/}
+                <GoogleLogin
+                  clientId="410089409718-7ffc7kadbf6e12sfic472g2vmtt6m4ie.apps.googleusercontent.com"
+                  buttonText="Login"
+                  onSuccess={responseGoogle}
+                  onFailure={responseGoogle}
+                // clientsecret={Bj0SwopTtA3fpoxgaEl_d65M}
+                />,
+                document.getElementById('googleButton')
               </div>
             </div>
           </div>

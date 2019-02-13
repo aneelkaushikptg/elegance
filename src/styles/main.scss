@@ -391,14 +391,29 @@ a {
     &-intro{
       padding-top:2rem;
       padding-bottom: 2rem;
-      h2{
-        margin-bottom: 1rem;
-        text-align: center;
+      &-img{
+        background:url(../images/about.jpg);
+        background-size: cover;
+        min-height: 300px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 100px;
+        margin-bottom: 2rem;
+        h2{
+          text-align: right;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
       }
+     
       p{
         font-family: 'Comfortaa', cursive;
         font-size: 13px;
         line-height: 21px;
+        span{
+          font-weight: 600;
+        }
       }
     }
   }

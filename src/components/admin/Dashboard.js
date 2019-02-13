@@ -1,9 +1,8 @@
 import React from "react";
 import { Tabs, Tab, Table, Button, ButtonGroup } from 'react-bootstrap';
-
 import ProductsData from "../../data/products.json";
 import ordersData from "../admin/admindata/orders.json";
-import ImageUploader from 'react-images-upload';
+//import ImageUploader from 'react-images-upload';
 import EditProduct from '../admin/Editproduct';
 
 export class Dashboard extends React.Component {
@@ -27,8 +26,8 @@ export class Dashboard extends React.Component {
                 range: '',
                 arrival: "new",
                 liked: false,
-                coverimg: "06.jpg",
-                images: ["06-01.jpg"],
+                coverimg: "",
+                images: [""],
                 sizes: []
             },
             productsDataTemp: ProductsData
@@ -250,7 +249,8 @@ export class Dashboard extends React.Component {
                                         <div className="col-md-6 form-group">
                                             <textarea name="description" className="form-control" placeholder="Description*" onChange={this.handleNewProduct} value={this.state.newproduct.description}
                                             ></textarea>
-                                            <ImageUploader
+                                            <input type="file" className="form-control" placeholder="Select Cover Image*" onChange={this.handleNewProduct} value={this.state.newproduct.coverimg} />
+                                            {/* <ImageUploader
                                                 withIcon={true}
                                                 buttonText='Choose images'
                                                 onChange={this.onDrop}
@@ -258,7 +258,7 @@ export class Dashboard extends React.Component {
                                                 maxFileSize={5242880}
                                                 singleImage={false}
                                                 withPreview={true}
-                                            />
+                                            /> */}
                                         </div>
                                         <div className="col-md-6 form-group">
                                             <button type="submit" name="addprod" className="btn bgbtn" onClick={this.addProduct.bind(this.state.newproduct)}> Add Product</button>
