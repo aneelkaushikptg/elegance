@@ -4,9 +4,8 @@ import GoogleLogin from 'react-google-login';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
 const responseGoogle = (response) => {
-  console.log(response);
+  console.log(WE.w3.ig);
 }
-
 
 class Header extends React.Component {
   constructor(props) {
@@ -42,8 +41,7 @@ class Header extends React.Component {
                   onSuccess={responseGoogle}
                   onFailure={responseGoogle}
                 // clientsecret={Bj0SwopTtA3fpoxgaEl_d65M}
-                />,
-                document.getElementById('googleButton')
+                />
               </div>
             </div>
           </div>
