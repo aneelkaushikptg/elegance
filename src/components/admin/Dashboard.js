@@ -168,8 +168,8 @@ export class Dashboard extends React.Component {
                                             return (
                                                 <tr key={product.id}>
                                                     <td>{index + 1}</td>
-                                                    {/* <td><img alt={product.name} src={`${imageURL}${product.coverimg}`} className="smallimg" /></td> */}
-                                                    <td><img alt={product.name} src={product.coverimg} className="smallimg" /></td>
+                                                    <td><img alt={product.name} src={`${imageURL}${product.coverimg}`} className="smallimg" /></td>
+                                                    {/* <td><img alt={product.name} src={product.coverimg} className="smallimg" /></td> */}
                                                     <td>{product.name}</td>
                                                     {/* <td>
                                                         {product.sizes.map(sizes => (
