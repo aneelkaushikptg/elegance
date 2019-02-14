@@ -30,22 +30,6 @@ class Home extends React.Component {
                     </div>
                 </div>
 
-                <div className="container home-identity">
-                    <div className="home-identity-left col-12 col-md-7">
-                        <h4>Our Identity</h4>
-                        <h2>Behind the brand</h2>
-                        <p>Drawing inspiration from art, architecture, and global culture, Aarohi Elegance
-                          designs with elegant sophistication, a refined statement that beautifies
-                          women and glorifies their personality.</p>
-                        <Link to="/about" className="btn btn-border m-t-20">
-                            knowmore
-                  </Link>
-                    </div>
-                    <div className="home-identity-right col-md-5 d-none d-sm-block">
-                        <img src={require('../images/identity.jpg')} className="img-fluid" alt="Identity" />
-                    </div>
-                </div>
-
                 <div className="home-shop">
                     <div className="container">
                         <h2>New Arrivals</h2>

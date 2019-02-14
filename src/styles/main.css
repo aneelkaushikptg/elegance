@@ -223,24 +223,6 @@ a:hover {
             background: #fff;
             color: #000;
             font-weight: 600; }
-    .wrapper .home-identity {
-      padding: 1rem;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-items: center;
-      background: url(../../src/images/identitybg.svg);
-      background-size: 35% auto;
-      background-repeat: no-repeat;
-      background-position: left center; }
-      .wrapper .home-identity-left h2 {
-        margin: 0 0 10px 0;
-        font-size: 2.8rem; }
-      .wrapper .home-identity-left p {
-        font-family: 'Comfortaa', cursive;
-        margin: 0; }
-      .wrapper .home-identity-right {
-        padding: 2.5rem; }
     .wrapper .home-shop {
       padding: 2rem;
       display: flex;
@@ -318,6 +300,24 @@ a:hover {
         text-align: right;
         margin-bottom: 1rem;
         text-align: center; }
+    .wrapper .about-intro-identity {
+      padding: 1rem;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      background: url(../../src/images/identitybg.svg);
+      background-size: 35% auto;
+      background-repeat: no-repeat;
+      background-position: left center; }
+      .wrapper .about-intro-identity-left h2 {
+        margin: 0 0 10px 0;
+        font-size: 2.8rem; }
+      .wrapper .about-intro-identity-left p {
+        font-family: 'Comfortaa', cursive;
+        margin: 0; }
+      .wrapper .about-intro-identity-right {
+        padding: 2.5rem; }
     .wrapper .about-intro p {
       font-family: 'Comfortaa', cursive;
       font-size: 13px;

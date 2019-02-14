@@ -289,30 +289,6 @@ a {
         }       
       }
     }
-    &-identity{
-      padding: 1rem;
-      display:flex;
-      flex-flow: row nowrap;
-      justify-content: center;
-      align-items: center;
-      background:url(../../src/images/identitybg.svg);
-      background-size: 35% auto;
-      background-repeat: no-repeat;
-      background-position: left center;
-      &-left{
-        h2{
-          margin:0 0 10px 0; 
-          font-size: 2.8rem; 
-        }
-        p{
-          font-family: 'Comfortaa', cursive;
-          margin:0;
-        }
-      }
-      &-right{
-        padding: 2.5rem;
-      }        
-    }
     &-shop{
       padding: 2rem;
       display:flex;
@@ -405,6 +381,30 @@ a {
           margin-bottom: 1rem;
           text-align: center;
         }
+      }
+      &-identity{
+        padding: 1rem;
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        background:url(../../src/images/identitybg.svg);
+        background-size: 35% auto;
+        background-repeat: no-repeat;
+        background-position: left center;
+        &-left{
+          h2{
+            margin:0 0 10px 0; 
+            font-size: 2.8rem; 
+          }
+          p{
+            font-family: 'Comfortaa', cursive;
+            margin:0;
+          }
+        }
+        &-right{
+          padding: 2.5rem;
+        }        
       }
      
       p{

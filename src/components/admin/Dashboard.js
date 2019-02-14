@@ -18,15 +18,15 @@ export class Dashboard extends React.Component {
                 price: '',
                 discount: '',
                 fabric: '',
+                qty: '',
                 description: '',
-                category: '',
-                gender: '',
-                sale: '',
-                arrival: '',
+                category: 'designer',
+                gender: 'women',
+                sale: 'no',
                 range: '',
-                arrival: "new",
+                arrival: 'new',
                 liked: false,
-                coverimg: "",
+                coverimg: '',
                 images: [""],
                 sizes: []
             },
@@ -156,6 +156,7 @@ export class Dashboard extends React.Component {
                                             <th>Price</th>
                                             <th>Discount</th>
                                             <th>Sale Price</th>
+                                            <th>Qty</th>
                                             <th>Description</th>
                                             <th>Fabric</th>
                                             <th>Sale</th>
@@ -167,7 +168,8 @@ export class Dashboard extends React.Component {
                                             return (
                                                 <tr key={product.id}>
                                                     <td>{index + 1}</td>
-                                                    <td><img alt={product.name} src={`${imageURL}${product.coverimg}`} className="smallimg" /></td>
+                                                    {/* <td><img alt={product.name} src={`${imageURL}${product.coverimg}`} className="smallimg" /></td> */}
+                                                    <td><img alt={product.name} src={product.coverimg} className="smallimg" /></td>
                                                     <td>{product.name}</td>
                                                     {/* <td>
                                                         {product.sizes.map(sizes => (
@@ -177,6 +179,7 @@ export class Dashboard extends React.Component {
                                                     <td>{product.price}</td>
                                                     <td>{product.discount}%</td>
                                                     <td>{product.finalprice}</td>
+                                                    <td>{product.qty}</td>
                                                     <td>{product.description}</td>
                                                     <td>{product.fabric}</td>
                                                     <td>{product.sale}</td>
@@ -203,6 +206,8 @@ export class Dashboard extends React.Component {
                                             <input type="text" name="price" className="form-control" placeholder="Product Price*" value={this.state.newproduct.price}
                                                 onChange={this.handleNewProduct} />
                                             <input type="text" name="range" className="form-control" placeholder="Price Range*" value={this.state.newproduct.range}
+                                                onChange={this.handleNewProduct} />
+                                            <input type="text" name="range" className="form-control" placeholder="Price Qty*" value={this.state.newproduct.qty}
                                                 onChange={this.handleNewProduct} />
                                             <input type="text" name="discount" className="form-control" placeholder="Discount*" value={this.state.newproduct.discount}
                                                 onChange={this.handleNewProduct} />
@@ -247,9 +252,10 @@ export class Dashboard extends React.Component {
                                             </select>
                                         </div>
                                         <div className="col-md-6 form-group">
+                                            <input type="text" className="form-control" placeholder="Cover Image*" value={this.state.newproduct.coverimg} />
                                             <textarea name="description" className="form-control" placeholder="Description*" onChange={this.handleNewProduct} value={this.state.newproduct.description}
                                             ></textarea>
-                                            <input type="file" className="form-control" placeholder="Select Cover Image*" onChange={this.handleNewProduct} value={this.state.newproduct.coverimg} />
+
                                             {/* <ImageUploader
                                                 withIcon={true}
                                                 buttonText='Choose images'

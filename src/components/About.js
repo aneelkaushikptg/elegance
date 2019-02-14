@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link } from 'react-router-dom';
 
 export class About extends React.Component {
     render() {
@@ -8,6 +9,23 @@ export class About extends React.Component {
                     <div className="about-intro-img">
                         <h2>About Aarohi Elegance</h2>
                     </div>
+
+                    <div className="container about-intro-identity">
+                        <div className="about-intro-identity-left col-12 col-md-7">
+                            <h4>Our Identity</h4>
+                            <h2>Behind the brand</h2>
+                            <p>Drawing inspiration from art, architecture, and global culture, Aarohi Elegance
+                              designs with elegant sophistication, a refined statement that beautifies
+                          women and glorifies their personality.</p>
+                            {/* <Link to="/about" className="btn btn-border m-t-20">
+                                knowmore
+                           </Link> */}
+                        </div>
+                        <div className="about-intro-identity-right col-md-5 d-none d-sm-block">
+                            <img src={require('../images/identity.jpg')} className="img-fluid" alt="Identity" />
+                        </div>
+                    </div>
+
                     <p>
                         <span>Aarohi Elegance</span>, was founded in 2018 by Komali Kandadai. Her vision was to create a friendly,
                         welcoming space that showcases the best of luxury Indian fashion for women.
