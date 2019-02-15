@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ProductsData from "../data/products.json";
 import Like from "../components/common/Like";
 import Shared from "../services/shared";
+import trim from 'trim';
 
 let finalData = ProductsData;
 class Products extends React.Component {
@@ -34,6 +35,13 @@ class Products extends React.Component {
         const filterby = this.props.selectedCategory;
         const rangefilter = this.props.rangeFilter;
         const sortbyGender = this.props.sortByGender;
+        let finalData = this.props.db.database().ref('/ProductsData');
+        console.log(finalData);
+        // dbCon.push({
+        //     product: trim(e.target.value)
+        // });
+
+
 
         // filtering by individual Category
         if (filterby === "All" && rangefilter === 60 && sortbyGender === "All") {

@@ -3,6 +3,7 @@ import Products from "./Products"
 //import ProductsData from "../data/products.json";
 import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
+import * as firebase from 'firebase';
 
 class Collections extends React.Component {
     constructor(props) {
@@ -85,7 +86,7 @@ class Collections extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <Products selectedCategory={this.state.showCategory} rangeFilter={this.state.horizontal} sortByGender={this.state.showByGender} />
+                    <Products db={firebase} selectedCategory={this.state.showCategory} rangeFilter={this.state.horizontal} sortByGender={this.state.showByGender} />
                 </div>
             </div>
         );
